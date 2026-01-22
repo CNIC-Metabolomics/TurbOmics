@@ -1,3 +1,4 @@
+package-lock.json
 node_modules/* 
 src/public/jobs/* 
 !src/public/jobs/sample/
