@@ -5,37 +5,102 @@ const path = require("path");
 
 // Variables
 const router = express.Router();
+const myPath = path.join(__dirname, "../misc/");
 
-/*
-Descripción: Ruta para adquirir tablas de ejemplos desde cliente
-Params:
-    - No recibe ningún parámetro
-Return:
-    - Devuelve un objeto JSON con las 5 tablas necesarias para iniciar la creación del proyecto
+/**
+ * Sample configuration
+ * Easy to extend with more samples later
+ */
+const SAMPLE_CONFIG = {
+    1: {
+        json: {
+            xt: {"transpose": true, "name": "transcriptomic_quantifications.tsv", "file": "SampleData_Untarget/transcriptomic_quantifications.tsv"},
+            xq: {"transpose": true, "name": "proteomic_quantifications.tsv", "file": "SampleData_Untarget/proteomic_quantifications.tsv"},
+            xm: {"transpose": true, "name": "metabolomic_quantifications.tsv", "file": "SampleData_Untarget/metabolomic_quantifications.tsv"},
+            mdata: {"transpose": false, "name": "experimental_metadata.tsv", "file": "SampleData_Untarget/experimental_metadata.tsv"},
+            t2i: {"transpose": false, "name": "transcriptomic_metadata.tsv", "file": "SampleData_Untarget/transcriptomic_metadata.tsv"},
+            q2i: {"transpose": false, "name": "proteomic_metadata.tsv", "file": "SampleData_Untarget/proteomic_metadata.tsv"},
+            m2i: {"transpose": false, "name": "metabolomic_metadata.tsv", "file": "SampleData_Untarget/metabolomic_metadata.tsv"},
 
-    TODO: Lo cambiaremos más adelante para cargar un trabajo
-*/
-router.get('/load_sample_data', (req, res) => {
-    console.log('Sending Sample Data');
+        },
+        zip: "SampleData_Untarget.zip",
+    },
+    2: {
+        json: {
+            xq: {"transpose": true, "name": "proteomic_quantifications.tsv", "file": "SampleData_Target/proteomic_quantifications.tsv"},
+            xm: {"transpose": true, "name": "metabolomic_quantifications.tsv", "file": "SampleData_Target/metabolomic_quantifications.tsv"},
+            mdata: {"transpose": false, "name": "experimental_metadata.tsv", "file": "SampleData_Target/experimental_metadata.tsv"},
+            q2i: {"transpose": false, "name": "proteomic_metadata.tsv", "file": "SampleData_Target/proteomic_metadata.tsv"},
+            m2i: {"transpose": false, "name": "metabolomic_metadata.tsv", "file": "SampleData_Target/metabolomic_metadata.tsv"},
+        },
+        zip: "SampleData_Target.zip",
+    },
+};
 
-    const myPath = path.join(__dirname, '../misc/');
+/**
+ * Helper: validate sample param
+ */
+function getSampleConfig(req, res) {
+    const sample = parseInt(req.query.sample || "1", 10);
 
-    resJson = {
-        'xq': JSON.parse(fs.readFileSync(path.join(myPath, 'Xq_minus_X_norm_woMV.json'), 'utf-8')),
-        'xm': JSON.parse(fs.readFileSync(path.join(myPath, 'Xm.json'), 'utf-8')),
-        'mdata': JSON.parse(fs.readFileSync(path.join(myPath, 'main_metadata.json'), 'utf-8')),
-        'q2i': JSON.parse(fs.readFileSync(path.join(myPath, 'q2info.json'), 'utf-8')),
-        'm2i': JSON.parse(fs.readFileSync(path.join(myPath, 'f2i.json'), 'utf-8'))
+    if (!SAMPLE_CONFIG[sample]) {
+        res.status(400).json({
+            error: 'Invalid "sample" parameter. Allowed values: 1 or 2.',
+        });
+        return null;
     }
+
+    return SAMPLE_CONFIG[sample];
+}
+
+/**
+ * Load sample data
+ */
+router.get("/load_sample_data", (req, res) => {
+    console.log("Sending Sample Data");
+
+    const config = getSampleConfig(req, res);
+    if (!config) return;
+
+    const resJson = {};
+    // Object.entries(config.json).forEach(([key, fileName]) => {
+    //     if (!fileName) return;
+    //     const filePath = path.join(myPath, fileName);
+    //     const fName = path.basename(filePath, path.extname(filePath));
+    //     if (fs.existsSync(filePath)) {
+    //         resJson[key] = [fName, JSON.parse(
+    //             fs.readFileSync(filePath, "utf-8")
+    //         )];
+    //     } else {
+    //         console.warn(`File not found for key "${key}": ${fileName}`);
+    //     }
+    // });
+    Object.entries(config.json).forEach(([key, value]) => {
+        if (!value) return;
+        let fileName = value.file;
+        let name = value.name;
+        let transpose = value.transpose;
+        const filePath = path.join(myPath, fileName);
+        if (fs.existsSync(filePath)) {
+            resJson[key] = {"name": name, "transpose": transpose, "data": fs.readFileSync(filePath, "utf-8")};
+        } else {
+            console.warn(`File not found for key "${key}": ${fileName}`);
+        }
+    });
 
     res.json(resJson);
 });
 
-router.get('/download_sample_data', (req, res) => {
-    console.log('Downloading Sample Data');
-    const myPath = path.join(__dirname, '../misc/');
-    res.download(path.join(myPath, 'TurboOmics-SampleData.zip'));
-})
+/**
+ * Download sample data
+ */
+router.get("/download_sample_data", (req, res) => {
+    console.log("Downloading Sample Data");
 
+    const config = getSampleConfig(req, res);
+    if (!config) return;
+
+    res.download(path.join(myPath, config.zip));
+});
 
 module.exports = router;

@@ -20,12 +20,28 @@ omicDict = {
     't': 'Transcriptomics'
     }
 
-omicDict_inv = {
-    'Metabolomics': 'm',
-    'Proteomics': 'q',
-    'Transcriptomics': 't'
-    }
+# Local functions
 
+def vip_efficient(model):
+    #https://github.com/scikit-learn/scikit-learn/issues/7050
+    t = model.x_scores_
+    w = model.x_rotations_ # replace with x_rotations_ if needed
+    q = model.y_loadings_ 
+    features_, _ = w.shape
+    vip = np.zeros(shape=(features_,))
+    inner_sum = np.diag(t.T @ t @ q.T @ q)
+    SS_total = np.sum(inner_sum)
+    vip = np.sqrt(features_*(w**2 @ inner_sum)/ SS_total)
+    return vip
+
+def filter_empty_omics(xi, omicDict):
+    omics_data = {}
+    for key, value in xi.items():
+        if value.shape[1] == 0:
+            logging.warning(f"Skipping empty omic: {key}")
+        else:
+            omics_data[omicDict[key]] = value
+    return omics_data
 
 # Main function
 
@@ -43,8 +59,12 @@ def main(args):
     #
     
     logging.info('Creating PathIntegrate object')
+    # drop empty omics before PathIntegrate
+    omics_data = filter_empty_omics(xi, omicDict)
+    if not omics_data:
+        raise ValueError("All omics were empty after filtering. No data available for PathIntegrate.")
     pi_model = pathintegrate.PathIntegrate(
-        omics_data={omicDict[key]: value for key, value in xi.items()},
+        omics_data=omics_data,
         metadata=depVarList,
         pathway_source= mo_paths,
         sspa_scoring=sspa.sspa_SVD,
@@ -52,9 +72,13 @@ def main(args):
     )
     
     # Multi View
+    from sklearn.cross_decomposition import PLSRegression
     
     logging.info('Creating Multi View model')
-    model = pi_model.MultiView(ncomp=args['n_components'])
+    # We have changed the label of the View, but the code still uses the old name
+    model = pi_model.SingleView(
+        model=PLSRegression,
+        model_params={'max_iter':500, 'n_components': args['n_components']})
     
     #
     # Extract information
@@ -66,52 +90,41 @@ def main(args):
     logging.info('Calculating Latent Variable information')
     model_info = {'LV':[], 'model':{}}
     for i in range(args['n_components']):
-        pearsonRes = stats.pearsonr(model.Ts_[:, i], depVarList)
+        pearsonRes = stats.pearsonr(model.x_scores_[:, i], depVarList)
         model_info['LV'].append({
           'LV': i+1, 
           'R2': pearsonRes.statistic**2,
-          'omic_weight': dict(zip(model.omics_names, model.A_corrected_[:,i].tolist())),
           'pv': pearsonRes.pvalue
           })
         
     from sklearn.metrics import r2_score
     model_info['model']['R2'] = r2_score(
-        depVarList, model.predict(list(pi_model.sspa_scores_mv.values()))
+        depVarList, model.predict(pi_model.sspa_scores_sv)
         )
     
     # Get projections
     projections = [
         {'sample': sample, 'proj': i.tolist()} 
-        for sample, i in zip(workingSamples, model.Ts_)
+        for sample, i in zip(workingSamples, model.x_scores_)
         ]
     
-    
     # Get pathway information
-    vip_info = model.vip.sort_values(by='VIP', ascending=False)
-    vip_info = dict(list(vip_info.groupby('Source')))
+    pathInfo = []
+    vip = pd.Series(vip_efficient(model), index=model.feature_names_in_)
+    for f, c in vip.items():
+        if f not in mo_paths.Pathway_name:
+            continue
+        _df = model.molecular_importance[f]\
+            .sort_values('PC1_Loadings', ascending=False).copy()
+        _df['fid'] = _df.index
+        _df['omic'] = [f2o[i] for i in _df.index]
+        pathInfo.append({
+            'Path_ID': f,
+            'Name': mo_paths.Pathway_name[f],
+            'VIP': c,
+            'molecular_importance': list(_df.T.to_dict().values())
+        })
     
-    pathInfo = {}
-    
-    for i in vip_info:
-    #i = 'Metabolomics'
-        vip_info[i]['Path_ID'] = vip_info[i].index
-        pathInfo[i] = vip_info[i].drop([0, 'Source'], axis=1).T.to_dict()
-    
-    for i in model.molecular_importance:
-        #i = 'Metabolomics'
-    
-        for j in model.molecular_importance[i]:
-            #j = 'R-HSA-112310'
-    
-            _df = model.molecular_importance[i][j]\
-                .sort_values('PC1_Loadings', ascending=False).copy()
-    
-            _df['fid'] = _df.index
-            _df['omic'] = omicDict_inv[i]
-    
-            pathInfo[i][j]['molecular_importance'] = list(_df.T.to_dict().values())
-            
-    # End #
     
     #
     # Write model information
@@ -133,6 +146,7 @@ def main(args):
     #
     
     logging.info('Calculate empirical p-values')
+    
     pvalue_info = {}
     
     # Get null distribution
@@ -151,19 +165,26 @@ def main(args):
             #[np.random.shuffle(i) for i in _x.T.to_numpy()]
             xi_i[key] = _x
     
+        # drop empty omics before PathIntegrate
+        omics_data_i = filter_empty_omics(xi_i, omicDict)
+        if len(omics_data_i) == 0:
+            logging.warning("All omics empty in permutation — skipping")
+            continue
         pi_model_i = pathintegrate.PathIntegrate(
-            omics_data={omicDict[key]: value for key, value in xi_i.items()},
+            omics_data=omics_data_i,
             metadata= depVarList_i,
             pathway_source= mo_paths,
             sspa_scoring=sspa.sspa_SVD,
             min_coverage=4
         )
     
-        model_i = pi_model_i.MultiView()
+        model_i = pi_model_i.SingleView(
+            model=PLSRegression,
+            model_params={'max_iter':500, 'n_components': args['n_components']})
         
         r2H0.append(r2_score(
             depVarList_i, 
-            model_i.predict(list(pi_model_i.sspa_scores_mv.values()))
+            model_i.predict(pi_model_i.sspa_scores_sv)
             ))
         
         
@@ -177,10 +198,11 @@ def main(args):
     
     return
 
+
 if __name__ == '__main__': 
     
     parser = argparse.ArgumentParser(
-        description='PathIntegrate_SV.py')
+        description='PathIntegrate_MV.py')
     
     parser.add_argument('--params', type=str, help='Path to json file with parameters')
 
@@ -197,6 +219,14 @@ if __name__ == '__main__':
         ]
     )
     
-    logging.info('Start PathIntegrate_SV.py')
-    main(params)
+    logging.info('Start PathIntegrate_MV.py')
+    try:
+        main(params)
+    except ValueError as e:
+        # Expected errors. Clean message only
+        print(str(e), file=sys.stderr)
+        sys.exit(1)
+    except Exception as e:
+        print("Unexpected internal error occurred.", file=sys.stderr)
+        sys.exit(2)
     logging.info('End script')

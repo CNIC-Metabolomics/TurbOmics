@@ -27,6 +27,8 @@ router.get('/get_turboputative/:jobID/:ion_mode', async (req, res) => {
         );
 
         let status = 'waiting';
+        console.log( path.join(TPFolder, 'TurboPutative_results.zip') );
+        console.log( path.join(TPFolder, 'error.log') );
 
         if (fs.existsSync(path.join(TPFolder, 'TurboPutative_results.zip'))) {
             status = 'ok';
@@ -35,6 +37,7 @@ router.get('/get_turboputative/:jobID/:ion_mode', async (req, res) => {
         if (fs.existsSync(path.join(TPFolder, 'error.log'))) {
             status = 'error';
         }
+        console.log( `status: ${status}`);
         return status;
     });
 

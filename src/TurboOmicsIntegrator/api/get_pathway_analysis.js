@@ -31,9 +31,19 @@ router.get('/get_pathway_analysis/:jobID/:view/:runId', async (req, res) => {
     const fileExists = async path => !!(await fs.promises.stat(path).catch(e => false));
 
     // Check error file existence
-    const error = await fileExists(path.join(myPath, 'error.log'));
-    if (error) {
-        res.json({ status: 'error' });
+    const errorLogPath = path.join(myPath, 'error.log');
+    if (await fileExists(errorLogPath)) {
+        try {
+            const raw = await fs.promises.readFile(errorLogPath, 'utf8');
+            const errorData = JSON.parse(raw);
+            res.json(errorData);
+        } catch (err) {
+            console.error('Failed to read or parse error.log:', err);
+            res.json({
+                status: 'error',
+                message: 'An unknown error occurred',
+            });
+        }
         return;
     }
 
@@ -62,7 +72,7 @@ router.get('/get_pathway_analysis/:jobID/:view/:runId', async (req, res) => {
         return
     }
 
-    res.json({ status: 'waiting' });
+    res.json({ status: 'waiting', runId});
 });
 
 router.get('/get_stats_model/:jobID/:view/:runId', async (req, res)=> {

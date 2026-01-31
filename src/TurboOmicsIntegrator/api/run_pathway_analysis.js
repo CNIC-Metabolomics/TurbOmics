@@ -90,29 +90,48 @@ router.post('/run_pathway_analysis/:jobID/:runId', async (req, res) => {
     });
 
     // Run PathIntegrate
+    const scriptPath = path.join(myPathPI, `PathIntegrate_${view}.py`);
+    const paramsPath = path.join(myPath, 'params.json');
+    const cmd = `${global.pythonPath} ${scriptPath} --params=${paramsPath}`;
+    console.log(`** ${cmd}`);
     const process = spawn(
-        global.pythonPathIntegrate,
+        global.pythonPath,
         [
-            path.join(myPathPI, `PathIntegrate_${view}.py`),
-            `--params=${path.join(myPath, 'params.json')}`
+            scriptPath,
+            `--params=${paramsPath}`
         ]
     );
-
-    process.stdout.on('data', data => fs.appendFileSync(
-        path.join(myPath, '.log'), `stdout: ${data}`
-    ));
-    process.stderr.on('data', data => fs.appendFileSync(
-        path.join(myPath, '.log'), `stderr: ${data}`
-    ));
-    process.on('close', code => {
-        if (code == 0) {
+    const errorLogPath = path.join(myPath, 'error.log');
+    const runLogPath = path.join(myPath, '.log');
+    let stderrBuffer = '';
+    let stdoutBuffer = '';
+    process.on('error', err => {
+        console.error('Failed to start PathIntegrate:', err);
+        fs.appendFileSync(runLogPath, `stderr: ${err.code}:${err.message}`);
+    });
+    process.stdout.on('data', data => {
+        const msg = data.toString();
+        stdoutBuffer += msg;
+        fs.appendFileSync(runLogPath, `stdout: ${msg}`);
+    });
+    process.stderr.on('data', data => {
+        const msg = data.toString();
+        stderrBuffer += msg;
+        fs.appendFileSync(runLogPath, `stderr: ${msg}`);
+    });
+    process.on('close', exitCode => {
+        if (exitCode === 0) {
             console.log('PathIntegrate executed successfully');
-        } else {
-            fs.writeFile(
-                path.join(myPath, 'error.log'), JSON.stringify({ status: 'error' }), () => { }
-            );
+            return;
         }
-    })
+        const errorPayload = {
+            status: 'error',
+            code: exitCode,
+            message: stderrBuffer.trim() || 'Process exited with error but no stderr output',
+            timestamp: new Date().toISOString()
+        };
+        fs.writeFileSync(errorLogPath, JSON.stringify(errorPayload, null, 2));
+    });
 
     // Send response
     res.json({ status: 'Job sent', runId: runId });

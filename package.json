@@ -1,7 +1,10 @@
 {
-  "name": "turboputative-web-server",
-  "version": "1.0.0",
-  "description": "",
+  "name": "TurbOmics",
+  "version": "1.4",
+  "description": "Web-based platform for multi-omics analysis of metabolomics data implemented in TurboPutative",
+  "author": "Rafael Barrero Rodriguez",
+  "maintainers": ["Jose Manuel Rodriguez","Rafael Barrero Rodriguez"],
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "start": "node ./src",
@@ -13,9 +16,9 @@
       "*/*.log"
     ]
   },
-  "author": "Rafael Barrero Rodriguez",
-  "license": "ISC",
   "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "@mui/styled-engine-sc": "^5.14.8",
     "@mui/x-data-grid": "^6.13.0",
     "cors": "^2.8.5",
