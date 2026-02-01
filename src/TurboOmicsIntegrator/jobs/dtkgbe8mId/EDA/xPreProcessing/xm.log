@@ -1,8 +1,0 @@
-stdout: 2024-12-12 19:44:13,067 - INFO - Start main
-stdout: 2024-12-12 19:44:13,067 - INFO - Reading input file from /home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/dtkgbe8mId/EDA/xPreProcessing/xm.json
-stdout: 2024-12-12 19:44:13,766 - INFO - Filtering using missing value threshold: 0.2
-2024-12-12 19:44:13,770 - INFO - Applying Log2 transformation to data
-stdout: 2024-12-12 19:44:13,775 - INFO - Centering and scaling data by columns
-stdout: 2024-12-12 19:44:13,794 - INFO - Imputing missing values using Minimum method
-stdout: 2024-12-12 19:44:13,834 - INFO - Saved preprocessed data to /home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/dtkgbe8mId/EDA/xPreProcessing/xm_norm.json
-stdout: 2024-12-12 19:44:13,834 - INFO - End
