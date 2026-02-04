@@ -40,10 +40,25 @@ def main(args):
         tpf[i] = tpf[i].groupby('_id').agg(lambda x: ' & '.join([str(n) for n in x.tolist()]))
     
     # Merge with m2i
-    m2itp = m2i.join(pd.concat(tpf)).fillna('').reset_index().replace('', np.nan)
+    # m2itp = m2i.join(pd.concat(tpf)).fillna('').reset_index().replace('', np.nan)
 
     # Write new m2i
-    m2itp[[m2itp.columns[0]]+m2i.columns.tolist()+COLUMNS].to_json(args.m2i, orient='records')
+    # m2itp[[m2itp.columns[0]]+m2i.columns.tolist()+COLUMNS].to_json(args.m2i, orient='records')
+
+    # Add a suffix to the NEW TPFilter columns
+    tp_concat = pd.concat(tpf)
+    m2itp = (
+        m2i.join(tp_concat, how='left', rsuffix='_TPF')
+        .fillna('')
+        .reset_index()
+        .replace('', np.nan)
+    )
+
+    # Build column list without duplicates, preserving order
+    base_cols = [m2itp.columns[0]] + m2i.columns.tolist()
+    final_cols = list(dict.fromkeys(base_cols + COLUMNS))  # removes duplicates safely
+
+    m2itp[final_cols].to_json(args.m2i, orient='records')
 
     # Write full m2i
     m2itp.to_json(args.m2itp, orient='records')

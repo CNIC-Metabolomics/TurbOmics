@@ -86,7 +86,7 @@ var processManager = {
         if (this.n_running == this.MAX_RUNNING_PROCESS) return; // maximum number of processes are being run
         
         console.log (`** Move process from WAITING to RUNNING: ${this.waiting[0].jobID}`);
-        console.log(this);
+        // console.log(this);
 
         // Update leading and IP nProcess
         this.client_IP_NProccess[this.waiting[0].IP]--;

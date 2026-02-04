@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 
 function myLogger (myPath) {
-    console.log('Creating .log file');
     const myLogging = msg => {
         console.log(msg);
         let log = `${new Date().toISOString().replace(/[TZ]/g, ' - ')}${msg}\n`;

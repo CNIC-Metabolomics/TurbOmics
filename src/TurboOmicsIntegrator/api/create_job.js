@@ -27,7 +27,6 @@ function writeJSON(jsonObject, filePath) {
                     console.log(err);
                     reject(1)
                 } else {
-                    console.log(`${filePath} written successfully`);
                     resolve(0)
                 }
             }

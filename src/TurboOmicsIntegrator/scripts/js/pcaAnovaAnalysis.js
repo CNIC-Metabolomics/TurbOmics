@@ -22,7 +22,6 @@ Local function
 */
 function checkFileExistence(myPath, files) {
     for (const file of files) {
-        console.log(file)
         if (!fs.existsSync(path.join(myPath, file))) {
             return false;
         }
@@ -37,7 +36,6 @@ function PCA_ANOVA_PY(myPathX, myPathPCA, omic, myLogging) {
 
     return new Promise(resolve => {
 
-        myLogging(`Executing PCA_ANOVA_PY in ${omic} omic`);
         const script = 'pca_anova_analysis.py';
 
         fs.writeFile(
@@ -46,9 +44,8 @@ function PCA_ANOVA_PY(myPathX, myPathPCA, omic, myLogging) {
             () => resolve(0)
         );
 
-        const process = spawn(
-            global.pythonPath,
-            [
+        // Run PCA ANOVA
+        params = [
                 path.join(__dirname, `../../scripts/py/${script}`),
                 omic,
                 path.join(myPathX, `x${omic}_norm.json`),
@@ -56,7 +53,13 @@ function PCA_ANOVA_PY(myPathX, myPathPCA, omic, myLogging) {
                 path.join(myPathX, `mdataType.json`),
                 path.join(myPathX, `index.json`),
                 path.join(myPathPCA, omic)
-            ],
+        ]
+            
+        myLogging(`** ${global.pythonPath} ${params.join(' ')}`);
+
+        const process = spawn(
+            global.pythonPath,
+            params,
             { encoding: 'utf-8' }
         );
 

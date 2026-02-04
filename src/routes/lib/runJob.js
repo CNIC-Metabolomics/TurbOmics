@@ -34,7 +34,7 @@ runJob = function (jobObject) {
 
     jobObject.tmTableName != "" && params.push(`--tmfile=${jobObject.tmTableName}`);
 
-    console.log(`** Run workflow: python ${params.join(' ')}`);
+    console.log(`** ${global.pythonPath} ${params.join(' ')}`);
 
     const process = spawn(
         global.pythonPath,

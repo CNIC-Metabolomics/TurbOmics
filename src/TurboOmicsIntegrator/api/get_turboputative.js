@@ -86,7 +86,7 @@ const addTPFilter = (ion_mode, jobID, myPath, myLogging) => {
             `--m2itp=${path.join(myPath, "m2iTP.json")}`
         ]
 
-        myLogging(`Run script: python ${params.join(' ')}`);
+        myLogging(`** ${global.pythonPath} ${params.join(' ')}`);
 
         const process = spawn(
             global.pythonPath,

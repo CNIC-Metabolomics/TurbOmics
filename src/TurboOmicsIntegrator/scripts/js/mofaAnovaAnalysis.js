@@ -22,7 +22,6 @@ Local function
 */
 function checkFileExistence(myPath, files) {
     for (const file of files) {
-        console.log(file)
         if (!fs.existsSync(path.join(myPath, file))) {
             return false;
         }
@@ -37,8 +36,6 @@ function MOFA_ANOVA_PY(myPathX, myPathMOFA, omics, myLogging) {
 
     return new Promise(resolve => {
 
-        myLogging(`Executing MOFA_ANOVA_PY`);
-
         const script = 'mofa_anova_analysis.py'
 
         fs.writeFile(
@@ -47,19 +44,24 @@ function MOFA_ANOVA_PY(myPathX, myPathMOFA, omics, myLogging) {
             () => resolve(0)
         );
 
+        // Run PCA ANOVA
+        params = [
+            path.join(__dirname, `../../scripts/py/${script}`),
+            `--omics=${omics.join(',')}`,
+            `--xi_paths=${omics.map(omic => path.join(myPathX, `x${omic}_norm.json`)).join(',')}`,
+            //`--xq_path=${path.join(myPathX, 'xq_norm.json')}`,
+            //`--xm_path=${path.join(myPathX, 'xm_norm.json')}`,
+            `--mdata_path=${path.join(myPathX, 'mdata.json')}`,
+            `--mdata_type_path=${path.join(myPathX, 'mdataType.json')}`,
+            `--index_path=${path.join(myPathX, 'index.json')}`,
+            `--outfolder_path=${myPathMOFA}`
+        ]
+            
+        myLogging(`** ${global.pythonPath} ${params.join(' ')}`);
+
         const process = spawn(
             global.pythonPath,
-            [
-                path.join(__dirname, `../../scripts/py/${script}`),
-                `--omics=${omics.join(',')}`,
-                `--xi_paths=${omics.map(omic => path.join(myPathX, `x${omic}_norm.json`)).join(',')}`,
-                //`--xq_path=${path.join(myPathX, 'xq_norm.json')}`,
-                //`--xm_path=${path.join(myPathX, 'xm_norm.json')}`,
-                `--mdata_path=${path.join(myPathX, 'mdata.json')}`,
-                `--mdata_type_path=${path.join(myPathX, 'mdataType.json')}`,
-                `--index_path=${path.join(myPathX, 'index.json')}`,
-                `--outfolder_path=${myPathMOFA}`
-            ],
+            params,
             { encoding: 'utf-8' }
         );
 

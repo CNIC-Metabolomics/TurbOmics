@@ -1,6 +1,7 @@
 // Import libraries
 const express = require('express');
 const fs = require('fs');
+const fsPromises = require('fs').promises;
 const path = require('path');
 const { spawn } = require('child_process');
 
@@ -60,19 +61,22 @@ router.post('/run_turboputative/:ion_mode/:jobID', async (req, res) => {
     // Create TurboPutative Folder
     const TPFolder = path.join(
         __dirname,
-        `../../public/jobs/${jobID}_${ion_mode}`
+        '../../public/jobs',
+        `${jobID}_${ion_mode}`
     );
+    
+    // Remove if exists
+    await fsPromises.rm(TPFolder, { recursive: true, force: true });
 
-    if (fs.existsSync(TPFolder)) {
-        fs.rmSync(TPFolder, { recursive: true, force: true });
-    }
+    // Create folder (guaranteed before next line)
+    await fsPromises.mkdir(TPFolder, { recursive: true });
 
-    await new Promise(resolve =>
-        fs.mkdir(TPFolder, { recursive: true }, () => resolve(0))
+    // Create timer file
+    await fsPromises.writeFile(
+        path.join(TPFolder, 'timer'),
+        'timer',
+        'utf-8'
     );
-
-    // Create timer
-    fs.writeFileSync(path.join(TPFolder, "timer"), "timer");
 
     // Copy regex.ini file
     fs.copyFileSync(
@@ -104,7 +108,7 @@ router.post('/run_turboputative/:ion_mode/:jobID', async (req, res) => {
             `--tpfolder=${TPFolder}`
         ]
         
-    myLogging(`Run script: python ${params.join(' ')}`);
+    myLogging(`** ${global.pythonPath} ${params.join(' ')}`);
 
     const process = spawn(
         global.pythonPath,

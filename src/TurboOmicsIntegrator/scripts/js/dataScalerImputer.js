@@ -33,7 +33,7 @@ function dataScalerImputer(jobContext, fileType, myPathX, myLogging) {
             `--myVSNR=${path.join(__dirname, '../../scripts/R/myVSN.R')}`
         ];
 
-        console.log(global.pythonPath, exec.join(' '));
+        console.log(`** ${global.pythonPath} ${exec.join(' ')}`);
 
         const process = spawn(
             global.pythonPath,
