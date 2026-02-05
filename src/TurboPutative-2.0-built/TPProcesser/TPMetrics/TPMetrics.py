@@ -51,6 +51,10 @@ class TPMetrics(TPMetricsSuper):
         
         self.df = self.df.reset_index() # Generate column with index 
 
+        # Ensure TP_Class column exists with correct name
+        tp_class_cols = [c for c in self.df.columns if c.startswith('TP_Class')]
+        if 'TP_Class' not in self.df.columns and len(tp_class_cols) > 0:
+            self.df.rename(columns={tp_class_cols[0]: 'TP_Class'}, inplace=True)
         
         # correlation matrix between mz
         self.corr = self.df.loc[:, [self.m, self.rt, *self.i]].drop_duplicates().set_index([self.m, self.rt]).T.corr(method=self.corrType) 
@@ -132,7 +136,7 @@ class TPMetrics(TPMetricsSuper):
         dfl[self.tpc] = [' // '.join([j for j in list(set(i)) if not pd.isna(j)]) for i in dfl[self.tpc]]
 
         self.df = pd.merge(
-            self.df,
+            self.df.drop(columns=[self.tpc], errors='ignore'),
             dfl.loc[:, ['index', self.tpcL, self.tpc]],
             on='index',
             how='left'
