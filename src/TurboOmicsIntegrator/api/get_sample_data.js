@@ -13,6 +13,7 @@ const myPath = path.join(__dirname, "../misc/");
  */
 const SAMPLE_CONFIG = {
     1: {
+        organism: {"name": "Mouse", "scientific_name": "Mus musculus", "id": "mmusculus", "label": "Mouse - Mus musculus"},
         json: {
             xt: {"transpose": true, "name": "transcriptomic_quantifications.tsv", "file": "SampleData_Untarget/transcriptomic_quantifications.tsv"},
             xq: {"transpose": true, "name": "proteomic_quantifications.tsv", "file": "SampleData_Untarget/proteomic_quantifications.tsv"},
@@ -26,6 +27,7 @@ const SAMPLE_CONFIG = {
         zip: "SampleData_Untarget.zip",
     },
     2: {
+        organism: {"name": "Human", "scientific_name": "Homo sapiens", "id": "hsapiens", "label": "Human - Homo sapiens"},
         json: {
             xq: {"transpose": true, "name": "proteomic_quantifications.tsv", "file": "SampleData_Target/proteomic_quantifications.tsv"},
             xm: {"transpose": true, "name": "metabolomic_quantifications.tsv", "file": "SampleData_Target/metabolomic_quantifications.tsv"},
@@ -62,19 +64,9 @@ router.get("/load_sample_data", (req, res) => {
     const config = getSampleConfig(req, res);
     if (!config) return;
 
-    const resJson = {};
-    // Object.entries(config.json).forEach(([key, fileName]) => {
-    //     if (!fileName) return;
-    //     const filePath = path.join(myPath, fileName);
-    //     const fName = path.basename(filePath, path.extname(filePath));
-    //     if (fs.existsSync(filePath)) {
-    //         resJson[key] = [fName, JSON.parse(
-    //             fs.readFileSync(filePath, "utf-8")
-    //         )];
-    //     } else {
-    //         console.warn(`File not found for key "${key}": ${fileName}`);
-    //     }
-    // });
+    const resJson = {
+        organism: config.organism
+    };
     Object.entries(config.json).forEach(([key, value]) => {
         if (!value) return;
         let fileName = value.file;
