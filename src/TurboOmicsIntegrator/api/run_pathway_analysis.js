@@ -12,6 +12,23 @@ const VIEW = {
     'Multi-View': 'MV'
 }
 
+async function joinFiles(inputFiles, gmtFile, outputFile) {
+    let content = '';
+
+    // Add GMT file first
+    const gmtData = await fs.promises.readFile(gmtFile, 'utf8');
+    content += gmtData + '\n';
+
+    // Add other files
+    for (const file of inputFiles) {
+        const data = await fs.promises.readFile(file, 'utf8');
+        content += data + '\n';
+    }
+
+    // Write final GM file
+    await fs.promises.writeFile(outputFile, content, 'utf8');
+}
+
 // Routes
 router.post('/run_pathway_analysis/:jobID/:runId', async (req, res) => {
 
@@ -20,11 +37,13 @@ router.post('/run_pathway_analysis/:jobID/:runId', async (req, res) => {
     const view = VIEW[req.body.view];
     const runId = req.params.runId;
     const omics = Object.keys(req.body.f2id).filter(key => req.body.f2id[key]);
+    const cpwFiles = req.body.cpwFiles || [];
 
     // Set paths
-    const myPathBase = path.join(__dirname, '../jobs', jobID)
+    const myPathBase = path.join(__dirname, '../jobs', jobID);
     const myPath = path.join(myPathBase, 'PWA', view, runId.toString());
     const myPathX = path.join(myPathBase, 'EDA/xPreProcessing');
+    const myPathCPW = path.join(myPathBase, 'CPW');
     const myPathPI = path.join(__dirname, '../scripts/py/PathIntegrate');
 
 
@@ -38,6 +57,9 @@ router.post('/run_pathway_analysis/:jobID/:runId', async (req, res) => {
     // Create working folder
     await new Promise(resolve => {
         fs.mkdir(myPath, {}, () => resolve(0))
+    });
+    await new Promise(resolve => {
+        fs.mkdir(myPathCPW, {}, () => resolve(0))
     });
 
     // Write f2id
@@ -60,8 +82,14 @@ router.post('/run_pathway_analysis/:jobID/:runId', async (req, res) => {
     let gmt = _gmtArr.length > 0 ? _gmtArr[0] : 'Reactome_Homo_sapiens_pathways_multiomics_R89.gmt';
     gmt = path.join(myPathPI, 'Reactome_db', gmt);
 
-    //let gmt = path.join(myPathPI, 'Reactome_db', `Reactome_${req.body.OS}_pathways_multiomics_R89.gmt`);
-    //gmt = await fileExists(gmt) ? gmt : path.join(myPathPI, 'Reactome_db', `Reactome_Homo_sapiens_pathways_multiomics_R89.gmt`);
+    // Full paths of given custom pathways
+    const cpwFilePaths = cpwFiles.map(f =>
+        path.join(myPathCPW, f)
+    );
+
+    // Create the custom pathway (in GMT format)
+    const cpwGMT = path.join(myPathCPW, `joined_${runId}.gmt`);
+    await joinFiles(cpwFilePaths, gmt, cpwGMT);
 
     // Create and write params.json
     const params = {
@@ -77,7 +105,7 @@ router.post('/run_pathway_analysis/:jobID/:runId', async (req, res) => {
             (prev, curr) => ({ ...prev, [curr]: path.join(myPath, `${curr}2id.json`) }), {}
         ),
         "index": path.join(myPathX, 'index.json'),
-        "gmt": gmt,
+        "gmt": cpwGMT,
         "n_components": 5,
         "output": myPath
     }

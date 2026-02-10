@@ -8,6 +8,23 @@ const { spawn } = require("child_process");
 // Constants
 const router = express.Router();
 
+async function joinFiles(inputFiles, gmtFile, outputFile) {
+    let content = '';
+
+    // Add GMT file first
+    const gmtData = await fs.promises.readFile(gmtFile, 'utf8');
+    content += gmtData + '\n';
+
+    // Add other files
+    for (const file of inputFiles) {
+        const data = await fs.promises.readFile(file, 'utf8');
+        content += data + '\n';
+    }
+
+    // Write final GM file
+    await fs.promises.writeFile(outputFile, content, 'utf8');
+}
+
 // Routes
 router.post('/run_gsea/:jobID/:omic/:gseaID/:os', async (req, res) => {
 
@@ -51,6 +68,8 @@ router.post('/run_gsea/:jobID/:omic/:gseaID/:os', async (req, res) => {
         os
     ];
 
+    const cmd = `${global.RPath} ${exec.join(' ')}`;
+    console.log(`** ${cmd}`);
     const process = spawn(
         global.RPath,
         exec,
@@ -84,11 +103,19 @@ router.post('/run_msea/:jobID/:omic/:gseaID/:os', async (req, res) => {
 
     const { jobID, gseaID, os, omic } = req.params;
     const gseaData = req.body;
+    const cpwFiles = req.body.cpwFiles || [];
 
     // Set paths
-    const myPath = path.join(__dirname, '../jobs', jobID, 'GSEA', omic, gseaID, 'msea');
+    const myPathBase = path.join(__dirname, '../jobs', jobID);
+    const myPathCPW = path.join(myPathBase, 'CPW');
+    const myPath = path.join(myPathBase, 'GSEA', omic, gseaID, 'msea');
     const myPathKEGG = path.join(myPath, 'KEGG');
     const myPathChEBI = path.join(myPath, 'ChEBI');
+
+    // Write working path
+    await new Promise(resolve => {
+        fs.mkdir(myPathCPW, {}, () => resolve(0))
+    });
 
     // Check if gseaID exists
     const existGseaId = await new Promise(resolve => {
@@ -127,20 +154,11 @@ router.post('/run_msea/:jobID/:omic/:gseaID/:os', async (req, res) => {
 
         if (db == 'KEGG') {
             osAbbr = `${os.split('_')[0].toLowerCase().slice(0,1)}${os.split('_')[1].slice(0,2).toLowerCase()}`;
-            if ( osAbbr === 'hsa' ) {
-                gmtfile = path.join(
-                    __dirname, 
-                    '../scripts/data/kegg_metabolomics', 
-                    `RBR_WikiPathways_KEGG_hsa_pathways_compounds_R110.gmt`
-                );
-            }
-            else {
                 gmtfile = path.join(
                     __dirname, 
                     '../scripts/data/kegg_metabolomics', 
                     `RBR_KEGG_${osAbbr}_pathways_compounds_R110.gmt`
                 );
-            }
 
             // check gmt
             const gmtExist = await new Promise(
@@ -150,27 +168,18 @@ router.post('/run_msea/:jobID/:omic/:gseaID/:os', async (req, res) => {
                 gmtfile = path.join(
                     __dirname, 
                     '../scripts/data/kegg_metabolomics', 
-                    `RBR_WikiPathways_KEGG_hsa_pathways_compounds_R110.gmt`
+                    `RBR_KEGG_hsa_pathways_compounds_R110.gmt`
                 );
             }
 
         }
         
         if (db == 'ChEBI') {
-            if ( os === 'Homo_sapiens' ) {
-                gmtfile = path.join(
-                    __dirname, 
-                    '../scripts/data/reactome_metabolomics', 
-                    `RBR_WikiPathways_Reactome_Homo_sapiens_pathways_ChEBI_R89.gmt`
-                );
-            }
-            else {
                 gmtfile = path.join(
                     __dirname, 
                     '../scripts/data/reactome_metabolomics', 
                     `RBR_Reactome_${os}_pathways_ChEBI_R89.gmt`
                 );
-            }
 
             // check gmt
             const gmtExist = await new Promise(
@@ -180,19 +189,33 @@ router.post('/run_msea/:jobID/:omic/:gseaID/:os', async (req, res) => {
                 gmtfile = path.join(
                     __dirname, 
                     '../scripts/data/reactome_metabolomics', 
-                    `RBR_WikiPathways_Reactome_Homo_sapiens_pathways_ChEBI_R89.gmt`
+                    `RBR_Reactome_Homo_sapiens_pathways_ChEBI_R89.gmt`
                 );
             }
         }
+
+        // Full paths of given custom pathways
+        const cpwFilePaths = cpwFiles.map(f =>
+            path.join(myPathCPW, f)
+        );
+
+        // Create the custom pathway (in GMT format)
+        const cpwGMT = path.join(myPathCPW, `joined_${gseaID}.gmt`);
+        await joinFiles(cpwFilePaths, gmtfile, cpwGMT);
+
+console.log(cpwFilePaths);
+console.log(gmtfile);
 
         const myGseaPath = path.join(__dirname, '../scripts/R/myGSEA');
         const exec = [
             path.join(myGseaPath, 'myMSEA.R'),
             infile,
-            gmtfile,
+            cpwGMT,
             outfile
         ];
-    
+
+        const cmd = `${global.RPath} ${exec.join(' ')}`;
+        console.log(`** ${cmd}`);
         const process = spawn(
             global.RPath,
             exec,
@@ -271,6 +294,8 @@ router.post('/run_mummichog/:jobID/:omic/:gseaID/:os', async (req, res) => {
                 `-c`, `0.1`
             ];
 
+            const cmd = `${global.pythonPath} ${exec.join(' ')}`;
+            console.log(`** ${cmd}`);
             const process = spawn(
                 global.pythonPath,
                 exec,

@@ -24,6 +24,7 @@ router.use('/', require('./get_pathway_analysis'));
 router.use('/', require('./get_vsn_plot'));
 router.use('/', require('./extract_multi_assay_experiment'));
 router.use('/', require('./get_cmm'));
+router.use('/', require('./run_custom_pathways'));
 
 // Export
 module.exports = router;
