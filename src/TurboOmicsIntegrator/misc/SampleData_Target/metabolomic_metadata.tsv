@@ -1,50 +1,1051 @@
-fid	Name	Apex m/z	RT [min]	Platform	Mode
-P1	A00001	760.58465	19.341	C18	POS
-P2	A00002	876.80088	23.952	C18	POS
-P3	A00003	782.56882	18.116	C18	POS
-P4	A00004	758.56897	18.518	C18	POS
-P6	A00007	806.56868	17.913	C18	POS
-P7	A00008	874.78481	23.42	C18	POS
-P8	A00009	848.76963	23.348	C18	POS
-P9	A00010	784.58393	19.02	C18	POS
-P10	A00011	810.59934	19.6	C18	POS
-P11	A00012	902.81583	23.995	C18	POS
-P12	A00013	812.61544	21.49	C18	POS
-P13	A00014	703.57457	16.649	C18	POS
-P14	A00015	808.58384	18.354	C18	POS
-P15	A00016	846.75373	22.872	C18	POS
-P16	A00017	850.78588	23.923	C18	POS
-P17	A00018	738.64643	16.871	C18	POS
-P18	A00020	764.52141	16.962	C18	POS
-P19	A00021	872.76922	22.977	C18	POS
-P20	A00022	900.80052	23.515	C18	POS
-P21	A00023	732.55364	18.061	C18	POS
-P22	A00025	820.73836	22.798	C18	POS
-P23	A00026	496.33969	10.5	C18	POS
-P24	A00027	904.83199	24.673	C18	POS
-P25	A00028	832.58431	18.079	C18	POS
-N1	A0001	885.54802	16.302	C18	NEG
-N2	A0003	804.5751	19.724	C18	NEG
-N3	A0006	883.53182	15.792	C18	NEG
-N4	A0007	802.55911	18.807	C18	NEG
-N5	A0008	762.50662	17.058	C18	NEG
-N6	A0009	826.55882	18.392	C18	NEG
-N7	A0010	747.5652	16.792	C18	NEG
-N8	A0012	540.33037	10.662	C18	NEG
-N9	A0013	850.55826	18.167	C18	NEG
-N10	A0014	500.27797	9.825	C18	NEG
-N11	A0016	819.51703	16.348	C18	NEG
-N12	A0017	828.57385	19.224	C18	NEG
-N13	A0018	568.36144	11.98	C18	NEG
-N14	A0019	887.56249	17.004	C18	NEG
-N15	A0020	773.53171	17.523	C18	NEG
-N16	A0021	764.52207	17.408	C18	NEG
-N17	A0022	465.30387	13.098	C18	NEG
-N18	A0023	738.50735	17.228	C18	NEG
-N19	A0024	566.34622	10.886	C18	NEG
-N20	A0025	854.58935	20.033	C18	NEG
-N21	A0026	857.51657	15.592	C18	NEG
-N22	A0027	856.60557	21.713	C18	NEG
-N23	A0028	480.3093	10.665	C18	NEG
-N24	A0029	480.30913	11.502	C18	NEG
-N25	A0030	524.2777	9.895	C18	NEG
+MID	Name	ChEBI_ID	ChEBI_Name
+M1	S-1-pyrroline-5-carboxylate	1372	1-pyrroline-5-carboxylic acid
+M2	spermidine	16610	spermidine
+M3	1-methylnicotinamide		
+M4	12,13-DiHOME	72665	12,13-DiHOME
+M5	5-hydroxyindoleacetate		
+M6	alpha-ketoglutarate	30915	2-oxoglutaric acid
+M7	kynurenate		
+M8	3-hydroxyisobutyrate	37373	(S)-3-hydroxyisobutyric acid
+M9	3-hydroxy-3-methylglutarate	16831	3-hydroxy-3-methylglutaric acid
+M10	homovanillate (HVA)	545959	homovanillic acid
+M11	3-phosphoglycerate	17050	3-phosphoglyceric acid
+M12	cholate	16359	cholic acid
+M13	4-hydroxyphenylacetate	18101	4-hydroxyphenylacetic acid
+M14	5,6-dihydrothymine	27468	5,6-dihydrothymine
+M15	hypoxanthine	17368	hypoxanthine
+M16	9,10-DiHOME	72663	9,10-DiHOME
+M17	linoleate (18:2n6)	17351	linoleic acid
+M18	laurate (12:0)	30805	dodecanoic acid
+M19	quinolinate		
+M20	N6,N6,N6-trimethyllysine	17311	N(6),N(6),N(6)-trimethyl-L-lysine
+M21	N-acetylputrescine	17768	N-acetylputrescine
+M22	N-formylmethionine	16552	N-formyl-L-methionine
+M23	S-adenosylhomocysteine (SAH)	16680	S-adenosyl-L-homocysteine
+M24	adenosine 3',5'-cyclic monophosphate (cAMP)	17489	3',5'-cyclic AMP
+M25	adenosine 5'-monophosphate (AMP)	16027	adenosine 5'-monophosphate
+M26	5-methylthioadenosine (MTA)	17509	5'-S-methyl-5'-thioadenosine
+M27	arachidonate (20:4n6)		
+M28	arginine	16467	L-arginine
+M29	aspartate	17053	L-aspartic acid
+M30	2-hydroxyphenylacetate	28478	(2-hydroxyphenyl)acetic acid
+M31	3-(4-hydroxyphenyl)lactate	17385	3-(4-hydroxyphenyl)lactic acid
+M32	phenylpyruvate	30851	keto-phenylpyruvic acid
+M33	beta-alanine	16958	beta-alanine
+M34	carnosine		
+M35	biliverdin	17033	biliverdin
+M36	succinate		
+M37	3-hydroxybutyrate (BHBA)	17066	(R)-3-hydroxybutyric acid
+M38	cholesterol	1307929	1307929
+M39	choline phosphate	18132	phosphocholine
+M40	corticosterone	16827	corticosterone
+M41	cortisone	16962	cortisone
+M42	creatinine	16737	creatinine
+M43	cysteinylglycine	4047	L-cysteinylglycine
+M44	cystine	16283	L-cystine
+M45	sphingosine	16393	sphingosine
+M46	deoxycholate	28834	deoxycholic acid
+M47	cystathionine	17482	L-cystathionine
+M48	sphinganine	16566	sphinganine
+M49	flavin adenine dinucleotide (FAD)	16238	FAD
+M50	fumarate	18012	fumaric acid
+M51	gamma-glutamylglutamate	73705	gamma-Glu-Glu
+M52	gluconate		
+M53	glutarate (C5-DC)	17859	glutaric acid
+M54	glycine	15428	glycine
+M55	glycocholate	29746	glycocholate
+M56	guanidinoacetate	16344	guanidinoacetic acid
+M57	histidine	15971	L-histidine
+M58	cortisol		
+M59	hypotaurine	16668	hypotaurine
+M60	inosine	17596	inosine
+M61	myo-inositol	17268	myo-inositol
+M62	isoleucine	17191	L-isoleucine
+M63	2-aminoadipate	37024	2-aminoadipic acid
+M64	citrulline	16349	L-citrulline
+M65	lactose		
+M66	leucine	15603	L-leucine
+M67	lysine	18019	L-lysine
+M68	malate	30797	(S)-malic acid
+M69	methionine	16643	L-methionine
+M70	palmitate (16:0)	15756	hexadecanoic acid
+M71	nicotinamide		
+M72	stearate (18:0)	28842	octadecanoic acid
+M73	ornithine	15729	L-ornithine
+M74	orotate	16742	orotic acid
+M75	palmitoleate (16:1n7)	28716	palmitoleic acid
+M76	phenylalanine	17295	L-phenylalanine
+M77	phosphate	26078	phosphoric acid
+M78	proline	17203	L-proline
+M79	lactate	422	(S)-lactic acid
+M80	pyridoxal	17310	pyridoxal
+M81	retinol (Vitamin A)	45479	13-cis-retinol
+M82	salicylate	9008	salicyluric acid
+M83	serine	17822	serine
+M84	serotonin	28790	serotonin
+M85	taurine	15891	taurine
+M86	myristate (14:0)	28875	tetradecanoic acid
+M87	urea	16199	urea
+M88	uridine	16704	uridine
+M89	trans-urocanate		
+M90	glutamate	16015	L-glutamic acid
+M91	glutamine	18050	L-glutamine
+M92	threonine	16857	L-threonine
+M93	tryptophan	16828	L-tryptophan
+M94	valine	16414	L-valine
+M95	nicotinate		
+M96	glucose	4167	D-glucopyranose
+M97	alpha-ketobutyrate	30831	2-oxobutanoic acid
+M98	adenosine	16335	adenosine
+M99	betaine	17750	glycine betaine
+M100	cysteine	17561	L-cysteine
+M101	mannose	4208	D-mannopyranose
+M102	dimethylglycine	17724	N,N-dimethylglycine
+M103	alanine	16977	L-alanine
+M104	tyrosine	17895	L-tyrosine
+M105	pseudouridine	17802	pseudouridine
+M106	pyruvate	32816	pyruvic acid
+M107	uracil	17568	uracil
+M108	xylose		
+M109	cytidine	17562	cytidine
+M110	cotinine		
+M111	caffeine	27732	caffeine
+M112	fructose	28645	beta-D-fructofuranose
+M113	adenine	16708	adenine
+M114	cytosine	16040	cytosine
+M115	caprate (10:0)		
+M116	margarate (17:0)		
+M117	nonadecanoate (19:0)		
+M118	arachidate (20:0)		
+M119	maltose	18167	alpha-maltose
+M120	asparagine	17196	L-asparagine
+M121	N-stearoyl-sphinganine (d18:0/18:0)*		
+M122	dihydroorotate	30865	dihydroorotic acid
+M123	caproate (6:0)	30776	hexanoic acid
+M124	caprylate (8:0)		
+M125	pentadecanoate (15:0)		
+M126	trans-4-hydroxyproline	18095	trans-4-hydroxy-L-proline
+M127	allantoin	15676	allantoin
+M128	xanthine	17712	9H-xanthine
+M129	5-oxoproline	18183	5-oxo-L-proline
+M130	picolinate		
+M131	sarcosine	15611	sarcosine
+M132	pantothenate		
+M133	pipecolate	17964	pipecolic acid
+M134	phosphoethanolamine	17553	O-phosphoethanolamine
+M135	glycerate	32398	D-glyceric acid
+M136	3-ureidopropionate		
+M137	N-acetylleucine	17786	N-acetyl-L-leucine
+M138	N-acetylmethionine	21557	N-acetyl-L-methionine
+M139	N-acetylvaline	21565	N-acetyl-L-valine
+M140	erucate (22:1n9)	28792	erucic acid
+M141	bilirubin (Z,Z)	16990	bilirubin IXalpha
+M142	thyroxine	18332	L-thyroxine
+M143	gamma-glutamyltyrosine	82969	gamma-Glu-Tyr
+M144	methyl indole-3-acetate	72782	methyl (indol-3-yl)acetate
+M145	alpha-tocopherol	18145	(R,R,R)-alpha-tocopherol
+M146	N-acetylalanine	40992	N-acetyl-L-alanine
+M147	vanillylmandelate (VMA)	1127735	1127735
+M148	4-acetamidobutanoate	17645	4-acetamidobutanoic acid
+M149	3-aminoisobutyrate	27389	3-aminoisobutyric acid
+M150	citrate	30769	citric acid
+M151	2-aminobutyrate	35619	L-alpha-aminobutyric acid
+M152	urate	17775	7,9-dihydro-1H-purine-2,6,8(3H)-trione
+M153	ursodeoxycholate	9907	ursodeoxycholic acid
+M154	oleoyl ethanolamide		
+M155	gamma-glutamylglutamine	73707	gamma-Glu-Gln
+M156	4-hydroxyphenylpyruvate	15999	4-hydroxyphenylpyruvic acid
+M157	butyrate/isobutyrate (4:0)		
+M158	tigloylglycine		
+M159	N-acetylneuraminate		
+M160	N-acetylglucosaminylasparagine	17261	N(4)-(beta-N-acetyl-D-glucosaminyl)-L-asparagine
+M161	acetoacetate	15344	acetoacetic acid
+M162	creatine	16919	creatine
+M163	cys-gly, oxidized		
+M164	estrone 3-sulfate		
+M165	dihomo-linoleate (20:2n6)		
+M166	gamma-glutamylhistidine	133032	gamma-Glu-His
+M167	2-hydroxystearate		
+M168	N1-methyladenosine	16020	1-methyladenosine
+M169	glycerol	17754	glycerol
+M170	choline	15354	choline
+M171	gamma-glutamylleucine	68433	gamma-Glu-Leu
+M172	3-methoxytyrosine		
+M173	fluoxetine		
+M174	4-acetamidophenol		
+M175	naproxen		
+M176	beta-hydroxyisovalerate	37084	3-hydroxyisovaleric acid
+M177	ibuprofen		
+M178	arachidonoyl ethanolamide	2700	anandamide
+M179	palmitoyl ethanolamide	71464	palmitoyl ethanolamide
+M180	N-palmitoyl-sphingosine (d18:1/16:0)		
+M181	1-palmitoyl-2-oleoyl-GPE (16:0/18:1)		
+M182	1-palmitoyl-2-linoleoyl-GPI (16:0/18:2)		
+M183	1-palmitoyl-2-linoleoyl-GPC (16:0/18:2)		
+M184	stearoyl sphingomyelin (d18:1/18:0)		
+M185	1-palmitoyl-2-oleoyl-GPC (16:0/18:1)		
+M186	N-stearoyl-sphingosine (d18:1/18:0)*		
+M187	glycochenodeoxycholate		
+M188	taurochenodeoxycholate	16525	taurochenodeoxycholic acid
+M189	taurocholate	28865	taurocholic acid
+M190	taurodeoxycholate	9410	taurodeoxycholic acid
+M191	2-hydroxyhippurate (salicylurate)		
+M192	metoprolol		
+M193	3-(N-acetyl-L-cystein-S-yl) acetaminophen		
+M194	4-acetaminophen sulfate	32635	paracetamol sulfate
+M195	eicosapentaenoate (EPA; 20:5n3)		
+M196	methylsuccinate		
+M197	ethylmalonate		
+M198	carnitine	16347	(R)-carnitine
+M199	benzoate	39912	3,5-dihydroxybenzoic acid
+M200	3-phenylpropionate (hydrocinnamate)		
+M201	phenylacetate		
+M202	hippurate	18089	N-benzoylglycine
+M203	xanthurenate		
+M204	suberate (C8-DC)		
+M205	3-methyl-2-oxovalerate	35932	3-methyl-2-oxovaleric acid
+M206	methionine sulfoxide	17016	L-methionine S-oxide
+M207	3-methylhistidine	27596	N(pros)-methyl-L-histidine
+M208	4-acetamidophenylglucuronide		
+M209	5-hydroxylysine	18040	erythro-5-hydroxy-L-lysine
+M210	4-guanidinobutanoate	15728	4-guanidinobutanoic acid
+M211	glucuronate		
+M212	glycerol 3-phosphate	15978	sn-glycerol 3-phosphate
+M213	imidazole lactate	24773	3-(imidazol-5-yl)lactate
+M214	kynurenine	16946	L-kynurenine
+M215	glycerophosphorylcholine (GPC)		
+M216	maltotriose	140999	alpha-D-Glcp-(1->4)-alpha-D-Glcp-(1->4)-D-Glcp
+M217	N-acetylglutamate	17533	N-acetyl-L-glutamic acid
+M218	N-alpha-acetylornithine		
+M219	tartarate	15671	L-tartaric acid
+M220	xanthosine	18107	xanthosine
+M221	ribitol	15963	ribitol
+M222	glycodeoxycholate	27471	glycodeoxycholic acid
+M223	theophylline	28177	theophylline
+M224	quinate		
+M225	theobromine	28946	theobromine
+M226	gentisate	17189	2,5-dihydroxybenzoic acid
+M227	paraxanthine	25858	1,7-dimethylxanthine
+M228	indolelactate	24813	3-(indol-3-yl)lactic acid
+M229	3-indoxyl sulfate	43355	indoxyl sulfate
+M230	gamma-glutamylphenylalanine	89582	gamma-Glu-Phe
+M231	4-methyl-2-oxopentanoate	48430	4-methyl-2-oxopentanoic acid
+M232	1,5-anhydroglucitol (1,5-AG)		
+M233	1-palmityl-GPC (O-16:0)		
+M234	1-stearoyl-2-arachidonoyl-GPI (18:0/20:4)		
+M235	sphingosine 1-phosphate	392583	392583
+M236	1-stearoyl-2-oleoyl-GPS (18:0/18:1)		
+M237	1-stearoyl-GPI (18:0)		
+M238	1,2-dipalmitoyl-GPC (16:0/16:0)		
+M239	docosahexaenoate (DHA; 22:6n3)		
+M240	1-myristoyl-2-palmitoyl-GPC (14:0/16:0)		
+M241	alpha-hydroxyisocaproate	55534	(R)-2-hydroxy-4-methylpentanoic acid
+M242	maleate	18300	maleic acid
+M243	4-acetylphenol sulfate		
+M244	2-hydroxyoctanoate	86543	2-hydroxyoctanoic acid
+M245	levulinate (4-oxovalerate)		
+M246	3-hydroxyoctanoate	37098	3-hydroxyoctanoic acid
+M247	phenyllactate (PLA)		
+M248	palmitoylcarnitine (C16)		
+M249	hexanoylcarnitine (C6)		
+M250	theanine		
+M251	N-acetylaspartate (NAA)		
+M252	dehydroepiandrosterone sulfate (DHEA-S)		
+M253	acetylcarnitine (C2)		
+M254	cysteine s-sulfate	27891	S-sulfo-L-cysteine
+M255	1-palmitoylglycerol (16:0)		
+M256	tartronate (hydroxymalonate)		
+M257	oxalate (ethanedioate)	16995	oxalic acid
+M258	erythritol	17113	erythritol
+M259	saccharin		
+M260	3-hydroxymyristate	85148	3-hydroxytetradecanoic acid
+M261	iminodiacetate (IDA)		
+M262	1-oleoylglycerol (18:1)		
+M263	3-methyl-2-oxobutyrate	16530	3-methyl-2-oxobutanoic acid
+M264	homoarginine	27747	L-homoarginine
+M265	homocitrulline	17443	L-homocitrulline
+M266	pyroglutamylglutamine		
+M267	bradykinin		
+M268	2-linoleoylglycerol (18:2)		
+M269	3-hydroxydecanoate	132983	3-hydroxydecanoic acid
+M270	EDTA	42191	EDTA(4-)
+M271	N-acetylglycine	40410	N-acetylglycine
+M272	ribonate		
+M273	threonate		
+M274	galactonate		
+M275	beta-sitosterol		
+M276	indoleacetate	16411	indole-3-acetic acid
+M277	1-linoleoylglycerol (18:2)		
+M278	1-methylhistidine	50599	N(tele)-methyl-L-histidine
+M279	butyrylcarnitine (C4)		
+M280	isobutyrylcarnitine (C4)		
+M281	7-ketodeoxycholate		
+M282	glycolithocholate	37998	glycolithocholic acid
+M283	androsterone sulfate	83037	androsterone sulfate
+M284	indolepropionate		
+M285	N-(2-furoyl)glycine	82912	N-(2-furoyl)glycine
+M286	trigonelline (N'-methylnicotinate)		
+M287	dodecanedioate (C12-DC)		
+M288	glutamate, gamma-methyl ester		
+M289	N-acetyltyrosine	21563	N-acetyl-L-tyrosine
+M290	1,3-dimethylurate	68447	1,3-dimethyluric acid
+M291	3-methylxanthine	62207	3-methyl-9H-xanthine
+M292	3-hydroxylaurate	36206	3-hydroxylauric acid
+M293	pyridoxate	17405	4-pyridoxic acid
+M294	gamma-glutamylvaline	68848	gamma-Glu-Val
+M295	pyroglutamylvaline	132991	pyroglutamylvaline
+M296	3-hydroxysebacate	89182	3-hydroxysebacic acid
+M297	5-hydroxyhexanoate	589927	589927
+M298	propionylglycine	89836	propionylglycine
+M299	2-hydroxyadipate		
+M300	valylglutamate		
+M301	propionylcarnitine (C3)		
+M302	pro-hydroxy-pro		
+M303	3-hydroxy-2-ethylpropionate		
+M304	3-carboxy-4-methyl-5-propyl-2-furanpropanoate (CMPF)		
+M305	docosapentaenoate (n3 DPA; 22:5n3)		
+M306	docosadienoate (22:2n6)	75117	(13Z,16Z)-docosadienoic acid
+M307	adrenate (22:4n6)		
+M308	10-undecenoate (11:1n1)		
+M309	myristoleate (14:1n5)		
+M310	4-imidazoleacetate	16974	imidazol-4-ylacetic acid
+M311	1-methyl-4-imidazoleacetate	1606	1-methyl-4-imidazoleacetic acid
+M312	sebacate (C10-DC)		
+M313	stearidonate (18:4n3)		
+M314	5-dodecenoate (12:1n7)		
+M315	bradykinin, hydroxy-pro(3)		
+M316	octanoylcarnitine (C8)		
+M317	tauro-beta-muricholate		
+M318	decanoylcarnitine (C10)		
+M319	N-acetylglutamine	21553	N-acetyl-L-glutamine
+M320	N-acetyltryptophan	74640	N-acetyl-L-tryptophan
+M321	N-acetylphenylalanine	16259	N-acetyl-L-phenylalanine
+M322	gamma-glutamyl-epsilon-lysine	88494	epsilon-(gamma-glutamyl)lysine
+M323	1-palmitoyl-GPC (16:0)	72998	1-hexadecanoyl-sn-glycero-3-phosphocholine
+M324	1-margaroyl-GPC (17:0)		
+M325	N-acetylarginine	40521	N(alpha)-acetyl-L-arginine
+M326	piperine	28821	piperine
+M327	campesterol	19809	24-epicampesterol
+M328	myristoylcarnitine (C14)		
+M329	1-stearoyl-GPC (18:0)		
+M330	1-oleoyl-GPC (18:1)		
+M331	N-acetylthreonine	45826	N-acetyl-L-threonine
+M332	N-acetylisoleucine	21555	N-acetyl-L-isoleucine
+M333	10-nonadecenoate (19:1n9)		
+M334	10-heptadecenoate (17:1n7)		
+M335	epiandrosterone sulfate	83040	epiandrosterone sulfate
+M336	bradykinin, des-arg(9)		
+M337	N-acetylhistidine	16437	N-acetyl-L-histidine
+M338	gamma-glutamylglycine	73845	gamma-Glu-Gly
+M339	gamma-glutamyltryptophan	133028	gamma-Glu-Trp
+M340	stachydrine	35280	L-proline betaine
+M341	alpha-hydroxyisovalerate	60645	2-hydroxy-3-methylbutyric acid
+M342	hydroxybupropion		
+M343	gamma-glutamylmethionine	82965	gamma-Glu-Met
+M344	gamma-glutamylthreonine	133747	L-gamma-Glu-L-Thr
+M345	p-cresol sulfate	82914	p-cresol sulfate
+M346	nicotinate ribonucleoside		
+M347	pioglitazone		
+M348	erythronate*		
+M349	Fibrinopeptide A*		
+M350	Fibrinopeptide A, des-ala(1)*		
+M351	salicyluric glucuronide*		
+M352	eicosenoate (20:1)		
+M353	linolenate [alpha or gamma; (18:3n3 or 6)]		
+M354	aconitate [cis or trans]		
+M355	1-myristoyl-GPC (14:0)		
+M356	1-arachidoyl-GPC (20:0)		
+M357	metoprolol acid metabolite*		
+M358	stearoylcarnitine (C18)		
+M359	laurylcarnitine (C12)		
+M360	isovalerylcarnitine (C5)		
+M361	1-linoleoyl-GPC (18:2)		
+M362	7-methylxanthine	48991	7-methylxanthine
+M363	1,3,7-trimethylurate	691622	1,3,7-trimethyluric acid
+M364	3,7-dimethylurate		
+M365	1,7-dimethylurate		
+M366	5-acetylamino-6-formylamino-3-methyluracil	32643	5-acetamido-6-formamido-3-methyluracil
+M367	5-acetylamino-6-amino-3-methyluracil		
+M368	1-methylxanthine	68444	1-methyl-7H-xanthine
+M369	N1-methylinosine	19065	1-methylinosine
+M370	beta-guanidinopropanoate		
+M371	N2,N2-dimethylguanosine	19289	N(2),N(2)-dimethylguanosine
+M372	N4-acetylcytidine	70989	N(4)-acetylcytidine
+M373	N6-carbamoylthreonyladenosine		
+M374	orotidine	25722	orotidine
+M375	phenylacetylglutamine	17884	N(2)-phenylacetyl-L-glutamine
+M376	4-hydroxyhippurate	71018	p-hydroxyhippuric acid
+M377	5,6-dihydrouridine	23774	dihydrouridine
+M378	3-(3-amino-3-carboxypropyl)uridine*		
+M379	1-arachidonylglycerol (20:4)		
+M380	cysteine-glutathione disulfide	143243	cysteineglutathione disulfide
+M381	5-methyluridine (ribothymidine)		
+M382	isovalerylglycine	70984	N-isovalerylglycine
+M383	nicotinurate		
+M384	7-methylguanine	28664	2-amino-7-methyl-1,7-dihydro-6H-purin-6-one
+M385	1-stearoyl-GPE (18:0)		
+M386	3-methylcytidine		
+M387	N1-Methyl-2-pyridone-5-carboxamide	27410	N-methyl-6-pyridone-3-carboxamide
+M388	gamma-glutamylisoleucine*		
+M389	oleoylcarnitine (C18:1)		
+M390	2-methylbutyrylcarnitine (C5)		
+M391	phenol sulfate	27905	phenyl hydrogen sulfate
+M392	1-palmitoleoyl-GPC (16:1)*		
+M393	malonylcarnitine		
+M394	hexanoylglycine	64390	N-hexanoylglycine
+M395	glutamine_degradant*		
+M396	2-hydroxy-3-methylvalerate	89228	(2R,3R)-2-hydroxy-3-methylpentanoic acid
+M397	testosterone sulfate		
+M398	homostachydrine*		
+M399	1-arachidonoyl-GPC (20:4n6)*		
+M400	1-dihomo-linolenoyl-GPC (20:3n3 or 6)*		
+M401	1-dihomo-linoleoyl-GPC (20:2)*		
+M402	2-arachidonoyl-GPC (20:4)*		
+M403	2-oleoyl-GPC (18:1)*		
+M404	2-linoleoyl-GPC (18:2)*		
+M405	2-palmitoyl-GPC (16:0)*		
+M406	2-myristoyl-GPC (14:0)*		
+M407	1-docosahexaenoyl-GPC (22:6)*		
+M408	1-palmitoyl-GPE (16:0)	73004	1-hexadecanoyl-sn-glycero-3-phosphoethanolamine zwitterion
+M409	1-oleoyl-GPE (18:1)		
+M410	1-linoleoyl-GPE (18:2)*		
+M411	1-arachidonoyl-GPE (20:4n6)*		
+M412	N-acetylcitrulline		
+M413	2-hydroxypalmitate		
+M414	docosapentaenoate (n6 DPA; 22:5n6)		
+M415	gulonate*		
+M416	isobutyrylglycine	70979	N-isobutyrylglycine
+M417	glutarylcarnitine (C5-DC)		
+M418	2-methylmalonylcarnitine (C4-DC)		
+M419	tiglylcarnitine (C5:1-DC)		
+M420	hydroquinone sulfate		
+M421	catechol sulfate		
+M422	7-alpha-hydroxy-3-oxo-4-cholestenoate (7-Hoca)		
+M423	N-acetyl-aspartyl-glutamate (NAAG)		
+M424	tetradecanedioate (C14-DC)		
+M425	hexadecanedioate (C16-DC)		
+M426	1-myristoylglycerol (14:0)		
+M427	glycerophosphoethanolamine	52330	glycerophosphatidylethanolamine
+M428	3-(3-hydroxyphenyl)propionate		
+M429	ectoine	27592	ectoine
+M430	2-oleoyl-GPE (18:1)*		
+M431	2-palmitoyl-GPE (16:0)*		
+M432	1-arachidonoyl-GPI (20:4)*		
+M433	1-palmitoyl-GPI (16:0)		
+M434	glycolithocholate sulfate*		
+M435	taurolithocholate 3-sulfate	17864	taurolithocholic acid sulfate
+M436	deoxycarnitine	1941	4-(trimethylammonio)butanoic acid
+M437	N6-succinyladenosine		
+M438	1-ribosyl-imidazoleacetate*		
+M439	2-arachidonoyl-GPE (20:4)*		
+M440	leucylleucine	73531	Leu-Leu
+M441	N2-acetyllysine		
+M442	indoleacetylglutamine		
+M443	hexanoylglutamine		
+M444	N6-acetyllysine	17752	N(6)-acetyl-L-lysine
+M445	dihomo-linolenate (20:3n3 or n6)		
+M446	mannitol/sorbitol		
+M447	tryptophan betaine	5832	hypaphorine
+M448	4-vinylphenol sulfate	82931	4-vinylphenol sulfate
+M449	4-ethylphenylsulfate	82932	4-ethylphenyl sulfate
+M450	thymol sulfate	82911	thymol sulfate
+M451	pyrraline		
+M452	2-linoleoyl-GPE (18:2)*		
+M453	1-oleoyl-GPI (18:1)		
+M454	1-linoleoyl-GPI (18:2)*		
+M455	1-palmitoleoyl-GPE (16:1)*		
+M456	desmethylnaproxen sulfate		
+M457	sucralose		
+M458	2-hydroxyacetaminophen sulfate*		
+M459	2-methoxyacetaminophen sulfate*		
+M460	2-methoxyacetaminophen glucuronide*		
+M461	o-cresol sulfate	133089	o-cresol hydrogen sulfate
+M462	dimethylarginine (SDMA + ADMA)		
+M463	gamma-glutamylalanine	50619	gamma-Glu-Ala
+M464	N-acetylserine	45441	N-acetyl-L-serine
+M465	1-stearoyl-2-oleoyl-GPE (18:0/18:1)		
+M466	chiro-inositol		
+M467	4-allylphenol sulfate	133096	chavicol hydrogen sulfate
+M468	1-stearoyl-2-arachidonoyl-GPC (18:0/20:4)		
+M469	1-palmitoyl-2-linoleoyl-GPE (16:0/18:2)		
+M470	sphinganine-1-phosphate		
+M471	glycosyl-N-stearoyl-sphingosine (d18:1/18:0)		
+M472	succinylcarnitine (C4-DC)		
+M473	bilirubin (E,E)*		
+M474	bilirubin (E,Z or Z,E)*		
+M475	N-methylproline	90344	N-methylproline
+M476	beta-cryptoxanthin	10362	beta-cryptoxanthin
+M477	5alpha-androstan-3beta,17beta-diol disulfate		
+M478	5alpha-pregnan-3beta,20alpha-diol disulfate		
+M479	glycocholenate sulfate*		
+M480	taurocholenate sulfate*		
+M481	androstenediol (3beta,17beta) disulfate (1)		
+M482	pregnenediol disulfate (C21H34O8S2)*		
+M483	androstenediol (3beta,17beta) disulfate (2)		
+M484	21-hydroxypregnenolone disulfate		
+M485	21-hydroxypregnenolone monosulfate (1)		
+M486	5alpha-androstan-3alpha,17alpha-diol monosulfate		
+M487	5alpha-pregnan-3beta,20beta-diol monosulfate (1)		
+M488	5alpha-pregnan-3beta,20alpha-diol monosulfate (2)		
+M489	5alpha-pregnan-diol disulfate		
+M490	5alpha-androstan-3alpha,17beta-diol disulfate	133101	5alpha-androstane-3alpha,17beta-diol disulfate
+M491	5alpha-androstan-3alpha,17beta-diol monosulfate (1)		
+M492	5alpha-androstan-3beta,17alpha-diol disulfate	133112	5alpha-androstane-3beta,17alpha-diol disulfate
+M493	5alpha-androstan-3beta,17beta-diol monosulfate (2)		
+M494	androstenediol (3alpha, 17alpha) monosulfate (2)		
+M495	androstenediol (3alpha, 17alpha) monosulfate (3)		
+M496	androstenediol (3beta,17beta) monosulfate (1)		
+M497	androstenediol (3beta,17beta) monosulfate (2)		
+M498	5alpha-pregnan-3beta-ol,20-one sulfate		
+M499	4-hydroxycoumarin		
+M500	1-docosahexaenoyl-GPE (22:6)*		
+M501	1-docosapentaenoyl-GPC (22:5n3)*		
+M502	pregnenediol sulfate (C21H34O5S)*		
+M503	2-hydroxyglutarate	17084	2-hydroxyglutaric acid
+M504	gamma-CEHC		
+M505	N-acetyl-beta-alanine	16682	N-acetyl-beta-alanine
+M506	sphingomyelin (d18:1/18:1, d18:2/18:0)		
+M507	palmitoyl sphingomyelin (d18:1/16:0)		
+M508	3-hydroxyhippurate	70824	m-hydroxyhippuric acid
+M509	16a-hydroxy DHEA 3-sulfate	87774	16alpha-hydroxydehydroepiandrosterone 3-sulfate
+M510	17alpha-hydroxypregnenolone 3-sulfate		
+M511	pregnenolone sulfate		
+M512	andro steroid monosulfate C19H28O6S (1)*		
+M513	betonicine		
+M514	ergothioneine	4828	ergothioneine
+M515	1-margaroyl-GPE (17:0)*		
+M516	1-pentadecanoyl-GPC (15:0)*		
+M517	S-methylmethionine		
+M518	indole-3-carboxylate	24809	indole-3-carboxylic acid
+M519	13-HODE + 9-HODE		
+M520	tridecenedioate (C13:1-DC)*		
+M521	N-acetyl-3-methylhistidine*		
+M522	4-cholesten-3-one	16175	cholest-4-en-3-one
+M523	N-acetyl-cadaverine		
+M524	cinnamoylglycine		
+M525	cis-4-decenoylcarnitine (C10:1)		
+M526	phenylalanylphenylalanine	72723	Phe-Phe
+M527	S-carboxymethyl-L-cysteine		
+M528	(16 or 17)-methylstearate (a19:0 or i19:0)		
+M529	alpha-ketoglutaramate*		
+M530	metformin		
+M531	ibuprofen acyl glucuronide		
+M532	2,3-dihydroxyisovalerate		
+M533	3-methylglutaconate		
+M534	5-(galactosylhydroxy)-L-lysine		
+M535	isoursodeoxycholate	43419	isoursodeoxycholic acid
+M536	oxypurinol		
+M537	hydantoin-5-propionate		
+M538	sulfate*		
+M539	4-hydroxy-2-oxoglutaric acid	30923	4-hydroxy-2-oxoglutaric acid
+M540	4-hydroxyglutamate	21285	erythro-4-hydroxy-L-glutamic acid
+M541	L-urobilin	29023	(-)-stercobilin
+M542	hydroxycotinine		
+M543	omeprazole		
+M544	atenolol		
+M545	diphenhydramine		
+M546	hydrochlorothiazide		
+M547	ranitidine		
+M548	S-methylcysteine	45658	S-methylcysteine
+M549	androsterone glucuronide	28832	androsterone 3-glucosiduronic acid
+M550	argininate*		
+M551	solanidine		
+M552	2-oxoarginine*		
+M553	cis-4-decenoate (10:1n6)*		
+M554	sertraline		
+M555	gabapentin		
+M556	venlafaxine		
+M557	ethyl glucuronide	87248	ethyl glucuronide
+M558	glycyrrhetinate		
+M559	1-erucoyl-GPC (22:1)*		
+M560	1-adrenoyl-GPC (22:4)*		
+M561	1-lignoceroyl-GPC (24:0)		
+M562	1-nervonoyl-GPC (24:1n9)*		
+M563	1-(1-enyl-palmitoyl)-GPC (P-16:0)*		
+M564	1-(1-enyl-oleoyl)-GPC (P-18:1)*		
+M565	1-(1-enyl-stearoyl)-GPC (P-18:0)*		
+M566	1-methyl-5-imidazoleacetate	70966	1-methyl-5-imidazoleacetic acid
+M567	glycoursodeoxycholate	542261	542261
+M568	S-methylcysteine sulfoxide		
+M569	eicosanedioate (C20-DC)		
+M570	docosadioate (C22-DC)		
+M571	16-hydroxypalmitate		
+M572	quinine		
+M573	oleoyl-linoleoyl-glycerol (18:1/18:2) [1]		
+M574	oleoyl-linoleoyl-glycerol (18:1/18:2) [2]		
+M575	1-(1-enyl-palmitoyl)-GPE (P-16:0)*		
+M576	1-(1-enyl-stearoyl)-GPE (P-18:0)*		
+M577	2-stearoyl-GPI (18:0)*		
+M578	doxycycline		
+M579	alpha-CEHC glucuronide*		
+M580	2-oxindole-3-acetate		
+M581	N-oleoyltaurine		
+M582	linoleoylcarnitine (C18:2)*		
+M583	isoleucylalanine		
+M584	isoleucylglycine		
+M585	phenylalanylleucine		
+M586	tryptophylleucine		
+M587	valylleucine		
+M588	N-stearoyltaurine	132479	N-stearoyltaurine
+M589	carboxyethyl-GABA		
+M590	beta-citrylglutamate		
+M591	trimethylamine N-oxide	15724	trimethylamine N-oxide
+M592	equol sulfate		
+M593	dihydroferulate		
+M594	imidazole propionate		
+M595	paroxetine		
+M596	citalopram/escitalopram		
+M597	pregnanediol-3-glucuronide		
+M598	alliin		
+M599	threonylalanine		
+M600	phenylalanylmethionine		
+M601	phenylalanyltryptophan	74751	Phe-Trp
+M602	valylglycine	73699	Val-Gly
+M603	methionylalanine		
+M604	prolylalanine		
+M605	prolylglycine	61695	L-prolylglycine
+M606	N-palmitoylglycine	479285	479285
+M607	succinimide		
+M608	norfluoxetine		
+M609	lanthionine		
+M610	2-stearoyl-GPE (18:0)*		
+M611	(R)-3-hydroxybutyrylcarnitine	84842	(R)-3-hydroxybutyrylcarnitine
+M612	diltiazem		
+M613	N-acetylcarnosine		
+M614	margaroylcarnitine (C17)*		
+M615	N-methyltaurine		
+M616	glycohyocholate		
+M617	retinal		
+M618	2-hydroxydecanoate	133172	2-hydroxydecanoic acid
+M619	3-methyl catechol sulfate (2)		
+M620	4-methylcatechol sulfate		
+M621	3-methyl catechol sulfate (1)		
+M622	2-hydroxyibuprofen		
+M623	carboxyibuprofen		
+M624	O-desmethylvenlafaxine		
+M625	warfarin		
+M626	hydroxypioglitazone (M-IV)		
+M627	3b-hydroxy-5-cholenoic acid	384794	384794
+M628	guaiacol sulfate		
+M629	2-aminooctanoate	75145	2-aminooctanoic acid
+M630	gamma-CEHC glucuronide*		
+M631	2-piperidinone	77761	piperidin-2-one
+M632	N-acetyl-1-methylhistidine*		
+M633	indolin-2-one	31697	indolin-2-one
+M634	2,8-quinolinediol sulfate		
+M635	2-aminophenol sulfate		
+M636	3-acetylphenol sulfate		
+M637	sphingomyelin (d18:1/14:0, d16:1/16:0)*		
+M638	sphingomyelin (d18:2/16:0, d18:1/16:1)*		
+M639	6-oxopiperidine-2-carboxylate	87998	6-ketopiperidine-2-carboxylic acid
+M640	S-allylcysteine		
+M641	N-delta-acetylornithine	44673	N(5)-acetyl-L-ornithine
+M642	acisoga		
+M643	2-aminoheptanoate		
+M644	1-eicosapentaenoyl-GPE (20:5)*		
+M645	benzoylcarnitine*		
+M646	N2,N5-diacetylornithine	133217	bisorcic
+M647	3-methoxytyramine sulfate		
+M648	methionine sulfone		
+M649	cyclo(ala-pro)		
+M650	1-linolenoyl-GPC (18:3)*		
+M651	1-eicosapentaenoyl-GPC (20:5)*		
+M652	1-eicosenoyl-GPC (20:1)*		
+M653	N-acetylalliin		
+M654	1-dihomo-linolenoyl-GPE (20:3n3 or 6)*		
+M655	1-(1-enyl-oleoyl)-GPE (P-18:1)*		
+M656	O-sulfo-L-tyrosine	46215	O(4')-sulfo-L-tyrosine
+M657	ferulic acid 4-sulfate		
+M658	3-(3-hydroxyphenyl)propionate sulfate		
+M659	11-ketoetiocholanolone glucuronide		
+M660	etiocholanolone glucuronide	37451	3alpha-hydroxy-5beta-androstan-17-one 3-glucosiduronic acid
+M661	17alpha-hydroxypregnanolone glucuronide		
+M662	N-acetyltaurine	84415	acetyltaurine
+M663	1-docosapentaenoyl-GPC (22:5n6)*		
+M664	1-linolenoyl-GPE (18:3)*		
+M665	1-oleoyl-GPG (18:1)*		
+M666	1-palmitoyl-GPG (16:0)*		
+M667	N-acetyl-S-allyl-L-cysteine		
+M668	9-hydroxystearate		
+M669	3-methylglutarylcarnitine (2)		
+M670	methyl glucopyranoside (alpha + beta)		
+M671	alpha-CEHC sulfate		
+M672	alpha-CMBHC glucuronide		
+M673	sphingomyelin (d18:2/14:0, d18:1/14:1)*		
+M674	sphingomyelin (d18:1/24:1, d18:2/24:0)*		
+M675	octadecenedioylcarnitine (C18:1-DC)*		
+M676	5alpha-androstan-3alpha,17beta-diol monosulfate (2)		
+M677	myristoleoylcarnitine (C14:1)*		
+M678	N-formylphenylalanine	133534	N-formyl-L-phenylalanine
+M679	cyclo(pro-val)		
+M680	4-hydroxychlorothalonil	133542	4-hydroxychlorothalonil
+M681	isoeugenol sulfate		
+M682	tyramine O-sulfate	133530	tyramine sulfate
+M683	3-hydroxypyridine sulfate	133559	3-hydroxypyridine sulfate
+M684	maltol sulfate		
+M685	phenylacetylcarnitine		
+M686	arabonate/xylonate		
+M687	methyl-4-hydroxybenzoate sulfate	133532	methyl-4-hydroxybenzoate O-sulfate
+M688	1-dihomo-linolenylglycerol (20:3)		
+M689	4-vinylguaiacol sulfate		
+M690	vanillactate	1240674	1240674
+M691	eugenol sulfate	133570	eugenol sulfate
+M692	pregnanolone/allopregnanolone sulfate		
+M693	2-methoxyresorcinol sulfate		
+M694	2-acetamidophenol sulfate		
+M695	p-cresol glucuronide*		
+M696	acesulfame		
+M697	valsartan		
+M698	6-hydroxyindole sulfate		
+M699	propyl 4-hydroxybenzoate sulfate		
+M700	umbelliferone sulfate		
+M701	sphingomyelin (d18:1/20:0, d16:1/22:0)*		
+M702	sphingomyelin (d18:1/20:1, d18:2/20:0)*		
+M703	sphingomyelin (d18:1/20:2, d18:2/20:1, d16:1/22:2)*		
+M704	behenoyl sphingomyelin (d18:1/22:0)*		
+M705	sphingomyelin (d18:1/22:1, d18:2/22:0, d16:1/24:1)*		
+M706	sphingomyelin (d18:1/22:2, d18:2/22:1, d16:1/24:2)*		
+M707	lignoceroyl sphingomyelin (d18:1/24:0)		
+M708	sphingomyelin (d17:1/16:0, d18:1/15:0, d16:1/17:0)*		
+M709	dopamine 4-sulfate		
+M710	dopamine 3-O-sulfate	37946	dopamine 3-O-sulfate
+M711	daidzein sulfate (2)		
+M712	3-hydroxyhexanoate	37049	(S)-3-hydroxyhexanoic acid
+M713	3beta-hydroxy-5-cholestenoate		
+M714	1,2,3-benzenetriol sulfate (1)		
+M715	1,2,3-benzenetriol sulfate (2)		
+M716	3-methoxycatechol sulfate (1)		
+M717	N-acetylkynurenine (2)		
+M718	C-glycosyltryptophan		
+M719	tramadol		
+M720	alpha-hydroxymetoprolol		
+M721	arabitol/xylitol		
+M722	N-acetylglucosamine/N-acetylgalactosamine		
+M723	adipoylcarnitine (C6-DC)		
+M724	nonanoylcarnitine (C9)		
+M725	suberoylcarnitine (C8-DC)		
+M726	glycochenodeoxycholate 3-sulfate		
+M727	glycodeoxycholate 3-sulfate		
+M728	taurodeoxycholic acid 3-sulfate		
+M729	trans-3,4-methyleneheptanoate		
+M730	linoleoyl ethanolamide	64032	linoleoyl ethanolamide
+M731	1,2-dilinoleoyl-GPC (18:2/18:2)		
+M732	1-stearoyl-2-oleoyl-GPC (18:0/18:1)		
+M733	1-palmitoyl-2-arachidonoyl-GPC (16:0/20:4n6)		
+M734	1-palmitoyl-2-docosahexaenoyl-GPC (16:0/22:6)		
+M735	1-stearoyl-2-docosahexaenoyl-GPC (18:0/22:6)		
+M736	1-(1-enyl-stearoyl)-2-oleoyl-GPC (P-18:0/18:1)		
+M737	1-(1-enyl-stearoyl)-2-arachidonoyl-GPC (P-18:0/20:4)		
+M738	1-(1-enyl-stearoyl)-2-oleoyl-GPE (P-18:0/18:1)		
+M739	sphingomyelin (d18:1/17:0, d17:1/18:0, d19:1/16:0)		
+M740	1-palmitoyl-2-stearoyl-GPC (16:0/18:0)		
+M741	2-hydroxybutyrate/2-hydroxyisobutyrate		
+M742	2-methylcitrate/homocitrate		
+M743	oleate/vaccenate (18:1)		
+M744	isoleucylleucine/leucylisoleucine		
+M745	pregabalin		
+M746	leucylphenylalanine/isoleucylphenylalanine		
+M747	1-palmitoleoylglycerol (16:1)*		
+M748	palmitoyl dihydrosphingomyelin (d18:0/16:0)*		
+M749	tricosanoyl sphingomyelin (d18:1/23:0)*		
+M750	sphingomyelin (d18:2/23:0, d18:1/23:1, d17:1/24:1)*		
+M751	sphingomyelin (d18:2/24:1, d18:1/24:2)*		
+M752	amoxicillin		
+M753	1-stearoyl-2-linoleoyl-GPE (18:0/18:2)*		
+M754	1-stearoyl-2-arachidonoyl-GPE (18:0/20:4)		
+M755	1-stearoyl-2-linoleoyl-GPC (18:0/18:2)*		
+M756	1-palmitoyl-2-palmitoleoyl-GPC (16:0/16:1)*		
+M757	1-palmitoyl-2-eicosapentaenoyl-GPC (16:0/20:5)*		
+M758	1-palmitoyl-2-arachidonoyl-GPE (16:0/20:4)*		
+M759	1-palmitoyl-2-docosahexaenoyl-GPE (16:0/22:6)*		
+M760	1-stearoyl-2-docosahexaenoyl-GPE (18:0/22:6)*		
+M761	1-palmitoyl-2-arachidonoyl-GPI (16:0/20:4)*		
+M762	1-stearoyl-2-linoleoyl-GPI (18:0/18:2)		
+M763	gamma-tocopherol/beta-tocopherol		
+M764	1-(1-enyl-stearoyl)-2-arachidonoyl-GPE (P-18:0/20:4)*		
+M765	1-(1-enyl-palmitoyl)-2-docosahexaenoyl-GPE (P-16:0/22:6)*		
+M766	1-(1-enyl-palmitoyl)-2-arachidonoyl-GPE (P-16:0/20:4)*		
+M767	1-(1-enyl-stearoyl)-2-docosahexaenoyl-GPE (P-18:0/22:6)*		
+M768	1-(1-enyl-palmitoyl)-2-oleoyl-GPE (P-16:0/18:1)*		
+M769	1-(1-enyl-palmitoyl)-2-dihomo-linolenoyl-GPC (P-16:0/20:3)*		
+M770	1-(1-enyl-palmitoyl)-2-oleoyl-GPC (P-16:0/18:1)*		
+M771	1-(1-enyl-palmitoyl)-2-docosahexaenoyl-GPC (P-16:0/22:6)*		
+M772	1-(1-enyl-palmitoyl)-2-linoleoyl-GPC (P-16:0/18:2)*		
+M773	1-(1-enyl-palmitoyl)-2-arachidonoyl-GPC (P-16:0/20:4)*		
+M774	1-(1-enyl-stearoyl)-2-docosahexaenoyl-GPC (P-18:0/22:6)*		
+M775	1-stearyl-2-arachidonoyl-GPC (O-18:0/20:4)*		
+M776	1-palmityl-2-oleoyl-GPC (O-16:0/18:1)*		
+M777	1-palmityl-2-arachidonoyl-GPC (O-16:0/20:4)*		
+M778	sphingomyelin (d18:1/21:0, d17:1/22:0, d16:1/23:0)*		
+M779	behenoyl dihydrosphingomyelin (d18:0/22:0)*		
+M780	sphingomyelin (d18:0/18:0, d19:0/17:0)*		
+M781	N-palmitoyl-sphinganine (d18:0/16:0)		
+M782	lactosyl-N-palmitoyl-sphingosine (d18:1/16:0)		
+M783	cetirizine		
+M784	1-pentadecanoyl-2-linoleoyl-GPC (15:0/18:2)*		
+M785	1-margaroyl-2-oleoyl-GPC (17:0/18:1)*		
+M786	1-margaroyl-2-linoleoyl-GPC (17:0/18:2)*		
+M787	myristoyl dihydrosphingomyelin (d18:0/14:0)*		
+M788	7-hydroxyindole sulfate		
+M789	phenylacetylglutamate		
+M790	4-ethylphenol glucuronide		
+M791	1-stearoyl-2-dihomo-linolenoyl-GPC (18:0/20:3n3 or 6)*		
+M792	palmitoyl-linoleoyl-glycerol (16:0/18:2) [1]*		
+M793	palmitoyl-linoleoyl-glycerol (16:0/18:2) [2]*		
+M794	1-palmitoyl-2-oleoyl-GPI (16:0/18:1)*		
+M795	1-stearoyl-2-docosahexaenoyl-GPI (18:0/22:6)*		
+M796	1-(1-enyl-palmitoyl)-2-linoleoyl-GPE (P-16:0/18:2)*		
+M797	1-oleoyl-2-linoleoyl-GPE (18:1/18:2)*		
+M798	1-linoleoyl-GPA (18:2)*		
+M799	1-pentadecanoyl-2-arachidonoyl-GPC (15:0/20:4)*		
+M800	1-pentadecanoyl-2-docosahexaenoyl-GPC (15:0/22:6)*		
+M801	1-margaroyl-2-arachidonoyl-GPC (17:0/20:4)*		
+M802	1-margaroyl-2-docosahexaenoyl-GPC (17:0/22:6)*		
+M803	1-arachidoyl-2-arachidonoyl-GPC (20:0/20:4)*		
+M804	1-oleoyl-2-docosahexaenoyl-GPC (18:1/22:6)*		
+M805	1-linoleoyl-2-docosahexaenoyl-GPC (18:2/22:6)*		
+M806	1-palmityl-2-linoleoyl-GPC (O-16:0/18:2)*		
+M807	1-(1-enyl-stearoyl)-2-linoleoyl-GPC (P-18:0/18:2)*		
+M808	1-myristoyl-2-linoleoyl-GPC (14:0/18:2)*		
+M809	1-myristoyl-2-arachidonoyl-GPC (14:0/20:4)*		
+M810	1-myristoyl-2-docosahexaenoyl-GPC (14:0/22:6)*		
+M811	1-stearoyl-2-docosapentaenoyl-GPC (18:0/22:5n3)*		
+M812	1-stearoyl-2-docosapentaenoyl-GPC (18:0/22:5n6)*		
+M813	1-palmitoyl-2-adrenoyl-GPC (16:0/22:4)*		
+M814	1-stearoyl-2-adrenoyl-GPC (18:0/22:4)*		
+M815	1-stearyl-GPC (O-18:0)*		
+M816	1-oleoyl-2-dihomo-linolenoyl-GPC (18:1/20:3)*		
+M817	1-(1-enyl-palmitoyl)-2-palmitoleoyl-GPC (P-16:0/16:1)*		
+M818	1-(1-enyl-palmitoyl)-2-myristoyl-GPC (P-16:0/14:0)*		
+M819	1-(1-enyl-palmitoyl)-2-palmitoyl-GPC (P-16:0/16:0)*		
+M820	phosphatidylcholine (16:0/22:5n3, 18:1/20:4)*		
+M821	phosphatidylcholine (18:0/20:5, 16:0/22:5n6)*		
+M822	1-palmitoyl-2-docosahexaenoyl-GPI (16:0/22:6)*		
+M823	1-stearoyl-2-oleoyl-GPI (18:0/18:1)*		
+M824	1-stearoyl-2-dihomo-linolenoyl-GPI (18:0/20:3n3 or 6)*		
+M825	1-palmitoyl-2-eicosapentaenoyl-GPE (16:0/20:5)*		
+M826	1-stearoyl-2-dihomo-linolenoyl-GPE (18:0/20:3n3 or 6)*		
+M827	1,2-dilinoleoyl-GPE (18:2/18:2)*		
+M828	1-oleoyl-2-arachidonoyl-GPE (18:1/20:4)*		
+M829	1-(1-enyl-stearoyl)-2-linoleoyl-GPE (P-18:0/18:2)*		
+M830	1-linoleoyl-GPG (18:2)*		
+M831	thioproline		
+M832	palmitoylcholine	133677	hexadecanoylcholine
+M833	trans-3,4-methyleneheptanoylcarnitine		
+M834	mycophenolic acid		
+M835	glycocholate glucuronide (1)		
+M836	glycochenodeoxycholate glucuronide (1)		
+M837	(S)-3-hydroxybutyrylcarnitine		
+M838	glycosyl-N-palmitoyl-sphingosine (d18:1/16:0)		
+M839	methylsuccinoylcarnitine		
+M840	catechol glucuronide		
+M841	sulfamethoxazole		
+M842	oleoylcholine	133693	oleoylcholine
+M843	arachidonoylcholine	133694	arachidonoylcholine
+M844	docosahexaenoylcholine		
+M845	dihomo-linolenoyl-choline		
+M846	caffeic acid sulfate		
+M847	1-linoleoyl-2-linolenoyl-GPC (18:2/18:3)*		
+M848	1-palmitoleoyl-2-linolenoyl-GPC (16:1/18:3)*		
+M849	phosphatidylcholine (14:0/14:0, 16:0/12:0)		
+M850	phosphatidylcholine (15:0/18:1, 17:0/16:1, 16:0/17:1)*		
+M851	1-oleoyl-2-dihomo-linoleoyl-GPC (18:1/20:2)*		
+M852	phosphatidylcholine (18:0/20:2, 20:0/18:2)*		
+M853	1-(1-enyl-oleoyl)-2-docosahexaenoyl-GPE (P-18:1/22:6)*		
+M854	1-(1-enyl-stearoyl)-2-dihomo-linolenoyl-GPE (P-18:0/20:3)*		
+M855	lamotrigine		
+M856	hexadecadienoate (16:2n6)		
+M857	palmitoleoylcarnitine (C16:1)*		
+M858	pimeloylcarnitine/3-methyladipoylcarnitine (C7-DC)		
+M859	4-hydroxyphenylacetylglutamine	28036	N-4-hydroxyphenylacetylglutamic acid
+M860	2,3-dihydroxy-2-methylbutyrate		
+M861	2'-O-methylcytidine		
+M862	2'-O-methyluridine		
+M863	gamma-glutamyl-alpha-lysine		
+M864	palmitoyl-oleoyl-glycerol (16:0/18:1) [1]*		
+M865	palmitoyl-oleoyl-glycerol (16:0/18:1) [2]*		
+M866	oleoyl-oleoyl-glycerol (18:1/18:1)  [1]*		
+M867	oleoyl-oleoyl-glycerol (18:1/18:1) [2]*		
+M868	linoleoyl-arachidonoyl-glycerol (18:2/20:4) [1]*		
+M869	palmitoyl-arachidonoyl-glycerol (16:0/20:4) [2]*		
+M870	linoleoyl-linolenoyl-glycerol (18:2/18:3) [2]*		
+M871	palmitoleoyl-linoleoyl-glycerol (16:1/18:2) [1]*		
+M872	diacylglycerol (14:0/18:1, 16:0/16:1) [1]*		
+M873	diacylglycerol (14:0/18:1, 16:0/16:1) [2]*		
+M874	oleoyl-arachidonoyl-glycerol (18:1/20:4) [1]*		
+M875	oleoyl-arachidonoyl-glycerol (18:1/20:4) [2]*		
+M876	diacylglycerol (16:1/18:2 [2], 16:0/18:3 [1])*		
+M877	linoleoyl-linoleoyl-glycerol (18:2/18:2) [1]*		
+M878	stearoyl-arachidonoyl-glycerol (18:0/20:4) [1]*		
+M879	stearoyl-arachidonoyl-glycerol (18:0/20:4) [2]*		
+M880	perfluorooctanesulfonate (PFOS)		
+M881	1-palmityl-GPE (O-16:0)*		
+M882	1-palmityl-2-stearoyl-GPC (O-16:0/18:0)*		
+M883	1-palmityl-2-palmitoyl-GPC (O-16:0/16:0)*		
+M884	1-stearyl-2-docosapentaenoyl-GPC (O-18:0/22:5n3)*		
+M885	1-stearoyl-2-docosapentaenoyl-GPE (18:0/22:5n3)*		
+M886	1-stearoyl-2-docosapentaenoyl-GPE (18:0/22:5n6)*		
+M887	1-stearoyl-2-adrenoyl-GPE (18:0/22:4)*		
+M888	1-(1-enyl-stearoyl)-2-docosapentaenoyl-GPE (P-18:0/22:5n3)*		
+M889	1-palmitoleoyl-2-eicosapentaenoyl-GPC (16:1/20:5)*		
+M890	palmitoyl-docosahexaenoyl-glycerol (16:0/22:6) [1]*		
+M891	lactosyl-N-nervonoyl-sphingosine (d18:1/24:1)*		
+M892	N-behenoyl-sphingadienine (d18:2/22:0)*		
+M893	glycosyl-N-behenoyl-sphingadienine (d18:2/22:0)*		
+M894	N-palmitoylserine		
+M895	palmitoleoyl-arachidonoyl-glycerol (16:1/20:4) [2]*		
+M896	myristoyl-linoleoyl-glycerol (14:0/18:2) [1]*		
+M897	phosphatidylethanolamine (P-18:1/20:4, P-16:0/22:5n3)*		
+M898	1-palmitoyl-2-(hydroxylinoleoyl)-GPC (16:0/18:2(OH))*		
+M899	ceramide (d16:1/24:1, d18:1/22:1)*		
+M900	ceramide (d18:1/14:0, d16:1/16:0)*		
+M901	ceramide (d18:1/17:0, d17:1/18:0)*		
+M902	ceramide (d18:2/24:1, d18:1/24:2)*		
+M903	glycosyl ceramide (d18:2/24:1, d18:1/24:2)*		
+M904	ceramide (d18:1/20:0, d16:1/22:0, d20:1/18:0)*		
+M905	stearoylcholine*		
+M906	linoleoylcholine*		
+M907	trazadone		
+M908	sphingomyelin (d18:0/20:0, d16:0/22:0)*		
+M909	sphingomyelin (d18:1/19:0, d19:1/18:0)*		
+M910	sphingomyelin (d18:2/18:1)*		
+M911	sphingomyelin (d18:2/24:2)*		
+M912	sphingomyelin (d18:2/21:0, d16:2/23:0)*		
+M913	sphingomyelin (d18:2/23:1)*		
+M914	sphingomyelin (d18:1/25:0, d19:0/24:1, d20:1/23:0, d19:1/24:0)*		
+M915	sphingomyelin (d17:2/16:0, d18:2/15:0)*		
+M916	dexlansoprazole		
+M917	linolenoylcarnitine (C18:3)*		
+M918	behenoylcarnitine (C22)*		
+M919	arachidoylcarnitine (C20)*		
+M920	lignoceroylcarnitine (C24)*		
+M921	cerotoylcarnitine (C26)*		
+M922	ximenoylcarnitine (C26:1)*		
+M923	arachidonoylcarnitine (C20:4)		
+M924	eicosenoylcarnitine (C20:1)*		
+M925	dihomo-linoleoylcarnitine (C20:2)*		
+M926	dihomo-linolenoylcarnitine (C20:3n3 or 6)*		
+M927	erucoylcarnitine (C22:1)*		
+M928	docosahexaenoylcarnitine (C22:6)*		
+M929	nervonoylcarnitine (C24:1)*		
+M930	adrenoylcarnitine (C22:4)*		
+M931	docosapentaenoylcarnitine (C22:5n3)*		
+M932	levetiracetam		
+M933	1-lignoceroyl-2-arachidonoyl-GPC (24:0/20:4)*		
+M934	N,N,N-trimethyl-5-aminovalerate		
+M935	ethyl alpha-glucopyranoside		
+M936	carotene diol (1)		
+M937	carotene diol (2)		
+M938	carotene diol (3)		
+M939	cortolone glucuronide (1)		
+M940	fluconazole		
+M941	(N(1) + N(8))-acetylspermidine		
+M942	5-dodecenoylcarnitine (C12:1)		
+M943	2-butenoylglycine		
+M944	hydroxy-CMPF*		
+M945	trans-2-hexenoylglycine		
+M946	dodecenedioate (C12:1-DC)*		
+M947	hexadecenedioate (C16:1-DC)*		
+M948	octadecenedioate (C18:1-DC)		
+M949	octadecadienedioate (C18:2-DC)*		
+M950	glucuronide of C19H28O4 (2)*		
+M951	glucuronide of C10H18O2 (1)*		
+M952	3-carboxy-4-methyl-5-pentyl-2-furanpropionate (3-CMPFP)**		
+M953	glucuronide of C10H18O2 (7)*		
+M954	3-hydroxystachydrine*		
+M955	N-acetyl-2-aminooctanoate*		
+M956	hydroxyasparagine**		
+M957	perfluorooctanoate (PFOA)		
+M958	glyco-beta-muricholate**		
+M959	3-formylindole	28238	indole-3-carbaldehyde
+M960	pyroglutamylalanine*		
+M961	pyroglutamylleucine*		
+M962	gamma-glutamylcitrulline*		
+M963	N4-acetylsulfamethoxazole*		
+M964	glycine conjugate of C10H12O2*		
+M965	glycine conjugate of C10H14O2 (1)*		
+M966	glutamine conjugate of C7H12O2*		
+M967	glutamine conjugate of C6H10O2 (1)*		
+M968	glutamine conjugate of C6H10O2 (2)*		
+M969	tetradecadienoate (14:2)*		
+M970	3-amino-2-piperidone	76341	3-aminopiperidine-2-one
+M971	N,N-dimethylalanine		
+M972	3-indoleglyoxylic acid		
+M973	ethyl beta-glucopyranoside		
+M974	2-hydroxysebacate	89312	2-Hydroxydecanedioic acid
+M975	enterolactone sulfate		
+M976	ascorbic acid 3-sulfate*		
+M977	6-bromotryptophan		
+M978	1-carboxyethylphenylalanine		
+M979	1-carboxyethylvaline		
+M980	1-carboxyethylleucine		
+M981	1-carboxyethylisoleucine		
+M982	dodecadienoate (12:2)*		
+M983	N-acetyl-isoputreanine		
+M984	glucuronide of piperine metabolite C17H21NO3 (3)*		
+M985	glucuronide of piperine metabolite C17H21NO3 (4)*		
+M986	glucuronide of piperine metabolite C17H21NO3 (5)*		
+M987	sulfate of piperine metabolite C16H19NO3 (2)*		
+M988	sulfate of piperine metabolite C16H19NO3 (3)*		
+M989	sulfate of piperine metabolite C18H21NO3 (1)*		
+M990	2-naphthol sulfate		
+M991	4-ethylcatechol sulfate		
+M992	11beta-hydroxyandrosterone glucuronide		
+M993	N2-acetyl,N6,N6-dimethyllysine		
+M994	cholic acid glucuronide		
+M995	deoxycholic acid glucuronide		
+M996	4-allylcatechol sulfate		
+M997	3-hydroxypyridine glucuronide		
+M998	4-methylhexanoylglutamine		
+M999	glycoursodeoxycholic acid sulfate (1)		
+M1000	dihydrocaffeate sulfate (2)		
+M1001	lithocholate sulfate (1)		
+M1002	3-(methylthio)acetaminophen sulfate*		
+M1003	2-ketocaprylate		
+M1004	2,3-dihydroxy-5-methylthio-4-pentenoate (DMTPA)*		
+M1005	Fibrinopeptide B (1-13)**		
+M1006	3-hydroxy-2-methylpyridine sulfate		
+M1007	hydroxypalmitoyl sphingomyelin (d18:1/16:0(OH))**		
+M1008	cyclo(pro-arg)*		
+M1009	5-hydroxymethyl-2-furoylcarnitine*		
+M1010	branched-chain fatty acid 18:0 (2)**		
+M1011	tetradecadienedioate (C14:2-DC)*		
+M1012	pregnenetriol disulfate*		
+M1013	eicosenedioate (C20:1-DC)*		
+M1014	hydroxy-N6,N6,N6-trimethyllysine*		
+M1015	undecenoylcarnitine (C11:1)		
+M1016	3-decenoylcarnitine		
+M1017	palmitoyl-sphingosine-phosphoethanolamine (d18:1/16:0)		
+M1018	4-vinylcatechol sulfate		
+M1019	3,5-dichloro-2,6-dihydroxybenzoic acid		
+M1020	(S)-a-amino-omega-caprolactam		
+M1021	metabolonic lactone sulfate		
+M1022	vanillic acid glycine		
+M1023	branched chain 14:0 dicarboxylic acid**		
+M1024	1-methyl-5-imidazolelactate		
+M1025	(2 or 3)-decenoate (10:1n7 or n8)		
+M1026	isoursodeoxycholate sulfate (1)		
+M1027	branched-chain, straight-chain, or cyclopropyl 10:1 fatty acid (1)*		
+M1028	3-bromo-5-chloro-2,6-dihydroxybenzoic acid*		
+M1029	branched-chain, straight-chain, or cyclopropyl 12:1 fatty acid*		
+M1030	decadienedioic acid (C10:2-DC)**		
+M1031	deoxycholic acid 12-sulfate*		
+M1032	GlcNAc sulfate conjugate of C21H34O2 steroid**		
+M1033	cis-3,4-methyleneheptanoate		
+M1034	cis-3,4-methyleneheptanoylcarnitine		
+M1035	N-acetyl-2-aminoadipate		
+M1036	4-chlorobenzoic acid	17861	4-chlorobenzoate
+M1037	2,4-di-tert-butylphenol	89188	2,4-di-tert-butylphenol
+M1038	3-hydroxyoctanoylcarnitine (1)		
+M1039	cis-3,4-methyleneheptanoylglycine		
+M1040	bilirubin degradation product, C16H18N2O5 (1)**		
+M1041	bilirubin degradation product, C16H18N2O5 (2)**		
+M1042	bilirubin degradation product, C17H18N2O4 (1)**		
+M1043	bilirubin degradation product, C17H18N2O4 (2)**		
+M1044	bilirubin degradation product, C17H18N2O4 (3)**		
+M1045	bilirubin degradation product, C17H20N2O5 (1)**		
+M1046	bilirubin degradation product, C17H20N2O5 (2)**		
+M1047	tetrahydrocortisol glucuronide		
+M1048	N,N-dimethyl-pro-pro		
+M1049	oxindolylalanine		
+M1050	tetrahydrocortisone glucuronide (5)		
