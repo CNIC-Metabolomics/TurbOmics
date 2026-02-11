@@ -387,17 +387,26 @@ class TPMetrics(TPMetricsSuper):
         logging.info("Calculating score based on sum of all correlations")
 
         df = self.df.loc[:, ['index', sia, sis, sin]].dropna().explode([sia, sis, sin]).fillna(0)
+
+        # Force numeric types
+        df[sin] = pd.to_numeric(df[sin], errors="coerce").fillna(0)
+        df[sis] = pd.to_numeric(df[sis], errors="coerce").fillna(0)
+
         df[siavg] = [np.mean(np.abs(i)) for i in df[sia]]
 
         df[sisp] = [
-            1 if n==0 else (self.VcorrH0[int(min(self.MaxVcorrH0,n))-1,:]>s).sum()/self.VcorrH0.shape[1] 
+            1 if n == 0 else (self.VcorrH0[int(min(self.MaxVcorrH0, n)) - 1, :] > s).sum() / self.VcorrH0.shape[1]
             for s, n in zip(df[sis].to_list(), df[sin].to_list())
         ]
 
-        df.loc[df[sisp] == 0, sisp] = 1/self.VcorrH0.shape[1]
+        df.loc[df[sisp] == 0, sisp] = 1 / self.VcorrH0.shape[1]
+
+        # Force numeric again
+        df[siavg] = pd.to_numeric(df[siavg], errors="coerce").fillna(0)
+        df[sisp] = pd.to_numeric(df[sisp], errors="coerce").fillna(1)
 
         # FORMULA
-        df[siss] = np.sqrt(df[sin]) * df[siavg] * (-np.log10(df[sisp]))
+        df[siss] = np.sqrt(df[sin].astype(float)) * df[siavg] * (-np.log10(df[sisp]))
 
         self.df = pd.merge(
             self.df,
