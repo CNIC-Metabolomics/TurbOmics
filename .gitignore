@@ -1,5 +1,7 @@
+.vscode
 package-lock.json
-node_modules/* 
+logs/*
+node_modules/*
 src/public/jobs/* 
 !src/public/jobs/sample/
 **/__pycache__
