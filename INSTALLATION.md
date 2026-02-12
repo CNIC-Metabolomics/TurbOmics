@@ -1,25 +1,66 @@
 # TurbOmis/TurboPutative Installation
 
-## Getting Started
+## Requeriments 
 
-1. **Install the dependencies**
++ Python 3.12 or higher
++ R 4.5 or higher
++ Node.js
++ Install PM2 globally:
+```bash
+npm install -g pm2
+```
+
+## Install ModeJs dependencies
 
 ```bash
 npm install
 ```
 
-2. **Start the server**
+## Install Python requirements
 
 ```bash
-npm run start
+pip install -r python_requirements.txt
 ```
 
-3. **Open the web application**
+## Install R requirements
 
-Open [http://localhost:8080/TurboPutative](http://localhost:8080/TurboPutative) in your browser to access the web application.
+```bash
+Rscript installation-R-dependences.R
+```
 
 
-## File Structure Description
+# Getting Started
+
++ Start the application using the ecosystem file
+```bash
+pm2 start ecosystem.config.js
+```
+
+If it's already running:
+```bash
+pm2 restart ecosystem.config.js
+```
+or reload safely:
+```bash
+pm2 reload ecosystem.config.js
+``` 
+
++ Verify the flags are applied
+```bash
+pm2 show turbomics
+```
+
++ Where to see the traces
+```bash
+pm2 logs turbomics
+```
+or directly:
+```bash
+tail -f ./logs/error.log
+```
+
+
+# File Structure Description
 
 The `src` directory contains all the files and source code used by the web application:
 
@@ -47,17 +88,3 @@ The `src` directory contains all the files and source code used by the web appli
 * **src/TurboOmicsIntegrator/**
   Contains the TurbOmis frontend code.
 
-
-
-# Python requirements
-
-Python 3.10.X or higher
-
-Install python packages:
-```bash
-pip install -r python_requirements.txt
-```
- 1476  pip install pathintegrate
- 1478  pip install seaborn
-pip install sspa
-pip install tqdm
