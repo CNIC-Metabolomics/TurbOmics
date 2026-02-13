@@ -102,7 +102,7 @@ router.post('/run_gsea/:jobID/:omic/:gseaID/:os', async (req, res) => {
 router.post('/run_msea/:jobID/:omic/:gseaID/:os', async (req, res) => {
 
     const { jobID, gseaID, os, omic } = req.params;
-    const gseaData = req.body;
+    const gseaData = req.body.data;
     const cpwFiles = req.body.cpwFiles || [];
 
     // Set paths
@@ -173,8 +173,7 @@ router.post('/run_msea/:jobID/:omic/:gseaID/:os', async (req, res) => {
             }
 
         }
-        
-        if (db == 'ChEBI') {
+        else if (db == 'ChEBI') {
                 gmtfile = path.join(
                     __dirname, 
                     '../scripts/data/reactome_metabolomics', 
@@ -203,8 +202,6 @@ router.post('/run_msea/:jobID/:omic/:gseaID/:os', async (req, res) => {
         const cpwGMT = path.join(myPathCPW, `joined_${gseaID}.gmt`);
         await joinFiles(cpwFilePaths, gmtfile, cpwGMT);
 
-console.log(cpwFilePaths);
-console.log(gmtfile);
 
         const myGseaPath = path.join(__dirname, '../scripts/R/myGSEA');
         const exec = [
