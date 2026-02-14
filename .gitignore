@@ -6,6 +6,8 @@ src/public/jobs/*
 !src/public/jobs/sample/
 **/__pycache__
 tests
+env
+env_pathintegrate
 src/public/REnameMapTables/*.zip
 src/TurboPutative-2.0-built/TPProcesser/REname/data/preProcessedNames.tsv
 src/TurboOmicsIntegrator/jobs/4eYOz8s8nD
