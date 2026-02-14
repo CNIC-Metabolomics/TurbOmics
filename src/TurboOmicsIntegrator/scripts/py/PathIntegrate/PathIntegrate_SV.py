@@ -44,7 +44,9 @@ def main(args):
     
     workingSamples, depVarList, xi, mo_paths, f2o = get_data(args)
     
-    
+    # remove duplicate pathways from GMT
+    mo_paths = mo_paths[~mo_paths.index.duplicated(keep='first')]
+
     #
     # Apply PathIntegrate
     #

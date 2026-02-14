@@ -37,7 +37,11 @@ def main(args):
     
     workingSamples, depVarList, xi, mo_paths, f2o = get_data(args)
     
-    
+
+    # remove duplicate pathways from GMT
+    mo_paths = mo_paths[~mo_paths.index.duplicated(keep='first')]
+
+
     #
     # Apply PathIntegrate
     #
@@ -180,7 +184,7 @@ def main(args):
 if __name__ == '__main__': 
     
     parser = argparse.ArgumentParser(
-        description='PathIntegrate_SV.py')
+        description='PathIntegrate_MV.py')
     
     parser.add_argument('--params', type=str, help='Path to json file with parameters')
 
@@ -197,6 +201,6 @@ if __name__ == '__main__':
         ]
     )
     
-    logging.info('Start PathIntegrate_SV.py')
+    logging.info('Start PathIntegrate_MV.py')
     main(params)
     logging.info('End script')

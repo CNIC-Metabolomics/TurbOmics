@@ -120,10 +120,10 @@ router.post('/run_pathway_analysis/:jobID/:runId', async (req, res) => {
     // Run PathIntegrate
     const scriptPath = path.join(myPathPI, `PathIntegrate_${view}.py`);
     const paramsPath = path.join(myPath, 'params.json');
-    const cmd = `${global.pythonPath} ${scriptPath} --params=${paramsPath}`;
+    const cmd = `${global.pythonPathIntegrate} ${scriptPath} --params=${paramsPath}`;
     console.log(`** ${cmd}`);
     const process = spawn(
-        global.pythonPath,
+        global.pythonPathIntegrate,
         [
             scriptPath,
             `--params=${paramsPath}`
