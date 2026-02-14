@@ -2,7 +2,7 @@
 
 ## Requeriments 
 
-+ Python 3.12 or higher
++ Python 3.11. At the moment, we cannot upgrade further because some older packages (including certain versions of sspa) are not fully compatible with Python 3.12 yet.
 + R 4.5 or higher
 + Node.js
 + Install PM2 globally:
@@ -16,11 +16,38 @@ npm install -g pm2
 npm install
 ```
 
-## Install Python requirements
+## Install Python Requirements
 
+Two separate virtual environments are required because **PathwayIntegrate** depends on a dedicated set of package versions.
+
+### 1. Environment for MOFA2 and Mummichog
+
+Open a terminal (shell) and create the virtual environment:
 ```bash
+python -m venv env
+```
+
+Activate it and install the required packages:
+```bash
+source env/bin/activate
 pip install -r python_requirements.txt
 ```
+
+### 2. Environment for PathwayIntegrate
+
+Open a new terninal (shell) and create a separate virtual environment:
+```bash
+python -m venv env_pathwayintegrate
+```
+
+Activate it and install the required packages:
+```bash
+source env_pathwayintegrate/bin/activate
+pip install -r python_requirements_PathIntegrate.txt
+```
+
+> Make sure to activate the appropriate environment before running each tool.
+
 
 ## Install R requirements
 
