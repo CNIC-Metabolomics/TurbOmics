@@ -1,0 +1,104 @@
+stdout: Folder '/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/PCA/q' already exists.
+/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/PCA/q/pca_anova_analysis.log
+2025-03-03 16:20:20,882 - INFO - Start main
+2025-03-03 16:20:20,882 - INFO - Reading tables...
+2025-03-03 16:20:20,886 - INFO - index file read: /home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/index.json
+2025-03-03 16:20:20,887 - INFO - mdataType file read: /home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/mdataType.json
+stdout: 2025-03-03 16:20:23,338 - INFO - x file read: /home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/xq_norm.json read
+stdout: 2025-03-03 16:20:23,343 - INFO - mdataType file read: /home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/mdataType.json
+2025-03-03 16:20:23,344 - INFO - Calculating PCA...
+stdout: 2025-03-03 16:20:23,557 - INFO - PCA completed
+stdout: 2025-03-03 16:20:23,558 - INFO - Writing PCA output...
+stdout: 2025-03-03 16:20:23,579 - INFO - Calculating ANOVA and Tukey-HSD...
+stdout: 2025-03-03 16:20:23,588 - INFO - Calculating ANOVA: 1 - Mouse_ID
+stderr: /home/proteo/.local/lib/python3.9/site-packages/statsmodels/regression/linear_model.py:1716: RuntimeWarning: divide by zero encountered in scalar divide
+  return np.dot(wresid, wresid) / self.df_resid
+stdout: 2025-03-03 16:20:23,648 - ERROR - ANOVA error in (1, 'Mouse_ID')
+2025-03-03 16:20:23,648 - ERROR - r_matrix performs f_test for using dimensions that are asymptotically non-normal
+2025-03-03 16:20:23,653 - INFO - Calculating ANOVA: 1 - Treatment
+stdout: 2025-03-03 16:20:23,676 - INFO - Calculating Tukey-HSD: 1 - Treatment
+stdout: 2025-03-03 16:20:23,769 - INFO - Calculating ANOVA: 1 - Ig_treated
+stdout: 2025-03-03 16:20:23,788 - INFO - Calculating ANOVA: 1 - A12_treated
+stdout: 2025-03-03 16:20:23,807 - INFO - Calculating ANOVA: 2 - Mouse_ID
+stderr: /home/proteo/.local/lib/python3.9/site-packages/statsmodels/regression/linear_model.py:1716: RuntimeWarning: divide by zero encountered in scalar divide
+  return np.dot(wresid, wresid) / self.df_resid
+stdout: 2025-03-03 16:20:23,817 - ERROR - ANOVA error in (2, 'Mouse_ID')
+2025-03-03 16:20:23,817 - ERROR - r_matrix performs f_test for using dimensions that are asymptotically non-normal
+2025-03-03 16:20:23,822 - INFO - Calculating ANOVA: 2 - Treatment
+stdout: 2025-03-03 16:20:23,835 - INFO - Calculating Tukey-HSD: 2 - Treatment
+stdout: 2025-03-03 16:20:23,943 - INFO - Calculating ANOVA: 2 - Ig_treated
+stdout: 2025-03-03 16:20:23,961 - INFO - Calculating ANOVA: 2 - A12_treated
+stdout: 2025-03-03 16:20:23,978 - INFO - Calculating ANOVA: 3 - Mouse_ID
+stderr: /home/proteo/.local/lib/python3.9/site-packages/statsmodels/regression/linear_model.py:1716: RuntimeWarning: divide by zero encountered in scalar divide
+  return np.dot(wresid, wresid) / self.df_resid
+stdout: 2025-03-03 16:20:23,987 - ERROR - ANOVA error in (3, 'Mouse_ID')
+2025-03-03 16:20:23,987 - ERROR - r_matrix performs f_test for using dimensions that are asymptotically non-normal
+2025-03-03 16:20:23,991 - INFO - Calculating ANOVA: 3 - Treatment
+stdout: 2025-03-03 16:20:24,004 - INFO - Calculating Tukey-HSD: 3 - Treatment
+stdout: 2025-03-03 16:20:24,123 - INFO - Calculating ANOVA: 3 - Ig_treated
+stdout: 2025-03-03 16:20:24,159 - INFO - Calculating ANOVA: 3 - A12_treated
+stdout: 2025-03-03 16:20:24,179 - INFO - Calculating ANOVA: 4 - Mouse_ID
+stderr: /home/proteo/.local/lib/python3.9/site-packages/statsmodels/regression/linear_model.py:1716: RuntimeWarning: divide by zero encountered in scalar divide
+  return np.dot(wresid, wresid) / self.df_resid
+stdout: 2025-03-03 16:20:24,188 - ERROR - ANOVA error in (4, 'Mouse_ID')
+2025-03-03 16:20:24,188 - ERROR - r_matrix performs f_test for using dimensions that are asymptotically non-normal
+2025-03-03 16:20:24,193 - INFO - Calculating ANOVA: 4 - Treatment
+stdout: 2025-03-03 16:20:24,207 - INFO - Calculating Tukey-HSD: 4 - Treatment
+stdout: 2025-03-03 16:20:24,286 - INFO - Calculating ANOVA: 4 - Ig_treated
+stdout: 2025-03-03 16:20:24,303 - INFO - Calculating ANOVA: 4 - A12_treated
+stdout: 2025-03-03 16:20:24,321 - INFO - Calculating ANOVA: 5 - Mouse_ID
+stderr: /home/proteo/.local/lib/python3.9/site-packages/statsmodels/regression/linear_model.py:1716: RuntimeWarning: divide by zero encountered in scalar divide
+  return np.dot(wresid, wresid) / self.df_resid
+stdout: 2025-03-03 16:20:24,330 - ERROR - ANOVA error in (5, 'Mouse_ID')
+2025-03-03 16:20:24,330 - ERROR - r_matrix performs f_test for using dimensions that are asymptotically non-normal
+2025-03-03 16:20:24,334 - INFO - Calculating ANOVA: 5 - Treatment
+stdout: 2025-03-03 16:20:24,348 - INFO - Calculating Tukey-HSD: 5 - Treatment
+stdout: 2025-03-03 16:20:24,453 - INFO - Calculating ANOVA: 5 - Ig_treated
+stdout: 2025-03-03 16:20:24,471 - INFO - Calculating ANOVA: 5 - A12_treated
+stdout: 2025-03-03 16:20:24,488 - INFO - Calculating ANOVA: 6 - Mouse_ID
+stderr: /home/proteo/.local/lib/python3.9/site-packages/statsmodels/regression/linear_model.py:1716: RuntimeWarning: divide by zero encountered in scalar divide
+  return np.dot(wresid, wresid) / self.df_resid
+stdout: 2025-03-03 16:20:24,497 - ERROR - ANOVA error in (6, 'Mouse_ID')
+2025-03-03 16:20:24,497 - ERROR - r_matrix performs f_test for using dimensions that are asymptotically non-normal
+2025-03-03 16:20:24,502 - INFO - Calculating ANOVA: 6 - Treatment
+stdout: 2025-03-03 16:20:24,515 - INFO - Calculating Tukey-HSD: 6 - Treatment
+stdout: 2025-03-03 16:20:24,629 - INFO - Calculating ANOVA: 6 - Ig_treated
+stdout: 2025-03-03 16:20:24,648 - INFO - Calculating ANOVA: 6 - A12_treated
+stdout: 2025-03-03 16:20:24,666 - INFO - Calculating ANOVA: 7 - Mouse_ID
+stderr: /home/proteo/.local/lib/python3.9/site-packages/statsmodels/regression/linear_model.py:1716: RuntimeWarning: divide by zero encountered in scalar divide
+  return np.dot(wresid, wresid) / self.df_resid
+stdout: 2025-03-03 16:20:24,675 - ERROR - ANOVA error in (7, 'Mouse_ID')
+stdout: 2025-03-03 16:20:24,675 - ERROR - r_matrix performs f_test for using dimensions that are asymptotically non-normal
+stdout: 2025-03-03 16:20:24,680 - INFO - Calculating ANOVA: 7 - Treatment
+stdout: 2025-03-03 16:20:24,693 - INFO - Calculating Tukey-HSD: 7 - Treatment
+stdout: 2025-03-03 16:20:24,794 - INFO - Calculating ANOVA: 7 - Ig_treated
+stdout: 2025-03-03 16:20:24,811 - INFO - Calculating ANOVA: 7 - A12_treated
+stdout: 2025-03-03 16:20:24,829 - INFO - Calculating ANOVA: 8 - Mouse_ID
+stderr: /home/proteo/.local/lib/python3.9/site-packages/statsmodels/regression/linear_model.py:1716: RuntimeWarning: divide by zero encountered in scalar divide
+  return np.dot(wresid, wresid) / self.df_resid
+stdout: 2025-03-03 16:20:24,837 - ERROR - ANOVA error in (8, 'Mouse_ID')
+stdout: 2025-03-03 16:20:24,837 - ERROR - r_matrix performs f_test for using dimensions that are asymptotically non-normal
+stdout: 2025-03-03 16:20:24,842 - INFO - Calculating ANOVA: 8 - Treatment
+stdout: 2025-03-03 16:20:24,854 - INFO - Calculating Tukey-HSD: 8 - Treatment
+stdout: 2025-03-03 16:20:24,950 - INFO - Calculating ANOVA: 8 - Ig_treated
+stdout: 2025-03-03 16:20:24,967 - INFO - Calculating ANOVA: 8 - A12_treated
+stdout: 2025-03-03 16:20:24,984 - INFO - Calculating ANOVA: 9 - Mouse_ID
+stderr: /home/proteo/.local/lib/python3.9/site-packages/statsmodels/regression/linear_model.py:1716: RuntimeWarning: divide by zero encountered in scalar divide
+  return np.dot(wresid, wresid) / self.df_resid
+stdout: 2025-03-03 16:20:24,993 - ERROR - ANOVA error in (9, 'Mouse_ID')
+stdout: 2025-03-03 16:20:24,993 - ERROR - r_matrix performs f_test for using dimensions that are asymptotically non-normal
+stdout: 2025-03-03 16:20:24,997 - INFO - Calculating ANOVA: 9 - Treatment
+stdout: 2025-03-03 16:20:25,010 - INFO - Calculating Tukey-HSD: 9 - Treatment
+stdout: 2025-03-03 16:20:25,107 - INFO - Calculating ANOVA: 9 - Ig_treated
+stdout: 2025-03-03 16:20:25,124 - INFO - Calculating ANOVA: 9 - A12_treated
+stdout: 2025-03-03 16:20:25,141 - INFO - Calculating ANOVA: 10 - Mouse_ID
+stderr: /home/proteo/.local/lib/python3.9/site-packages/statsmodels/regression/linear_model.py:1716: RuntimeWarning: divide by zero encountered in scalar divide
+  return np.dot(wresid, wresid) / self.df_resid
+stdout: 2025-03-03 16:20:25,150 - ERROR - ANOVA error in (10, 'Mouse_ID')
+stdout: 2025-03-03 16:20:25,150 - ERROR - r_matrix performs f_test for using dimensions that are asymptotically non-normal
+stdout: 2025-03-03 16:20:25,154 - INFO - Calculating ANOVA: 10 - Treatment
+stdout: 2025-03-03 16:20:25,167 - INFO - Calculating Tukey-HSD: 10 - Treatment
+stdout: 2025-03-03 16:20:25,257 - INFO - Calculating ANOVA: 10 - Ig_treated
+stdout: 2025-03-03 16:20:25,275 - INFO - Calculating ANOVA: 10 - A12_treated
+stdout: 2025-03-03 16:20:25,288 - INFO - ANOVA and Tukey-HSD completed
+stdout: 2025-03-03 16:20:25,289 - INFO - End main

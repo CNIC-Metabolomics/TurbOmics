@@ -1,0 +1,42 @@
+stderr: /home/proteo/.local/lib/python3.9/site-packages/networkx/drawing/__init__.py:28: UserWarning: Drawing package networkx/drawing not supported with Python 3.x
+  warnings.warn('Drawing package networkx/drawing not supported '
+stderr: Started @ Tue Mar  4 14:42:28 2025
+
+stderr: Read 2226 features as reference list.
+stderr: Using 252 features (p < 0.100000) as significant list.
+stderr: 
+Pathway Analysis...
+stderr: Query number of significant compounds = 18 compounds
+stderr: Resampling, 100 permutations to estimate background ...
+stdout:      
+    --------------------------------------------
+    
+             oO                      ooooooooo
+           oOO   OOOOO  ooooo       ooo oooo
+     oOO   O       ooooo  oooooo ooooo
+    oooO           oooooo         oooo ooooo
+        Oooo   o      OOOOOO   oooo   oooooooo
+            ooooo  oooo      
+                 o
+    
+    --------------------------------------------
+    
+mummichog version 2.6.1 
+
+Got 535 cpd2mzFeatures
+Got 922 ListOfEmpiricalCompounds
+Got 502 merged ListOfEmpiricalCompounds
+Got 125 final ListOfEmpiricalCompounds
+ 1stdout:  2stdout:  3stdout:  4stdout:  5stdout:  6stdout:  7stdout:  8stdout:  9stdout:  10stdout:  11stdout:  12stdout:  13stdout:  14stdout:  15stdout:  16stdout:  17stdout:  18stdout:  19stdout:  20stdout:  21stdout:  22stdout:  23stdout:  24stdout:  25stdout:  26stdout:  27stdout:  28stdout:  29stdout:  30stdout:  31stdout:  32stdout:  33stdout:  34stdout:  35stdout:  36stdout:  37stdout:  38stdout:  39stdout:  40stdout:  41stdout:  42stdout:  43stdout:  44stdout:  45stdout:  46stdout:  47stdout:  48stdout:  49stdout:  50stdout:  51stdout:  52stdout:  53stdout:  54stdout:  55stdout:  56stdout:  57stdout:  58stdout:  59stdout:  60stdout:  61stdout:  62stdout:  63stdout:  64stdout:  65stdout:  66stdout:  67stdout:  68stdout:  69stdout:  70stdout:  71stdout:  72stdout:  73stdout:  74stdout:  75stdout:  76stdout:  77stdout:  78stdout:  79stdout:  80stdout:  81stdout:  82stdout:  83stdout:  84stdout:  85stdout:  86stdout:  87stdout:  88stdout:  89stdout:  90stdout:  91stdout:  92stdout:  93stdout:  94stdout:  95stdout:  96stdout:  97stdout:  98stdout:  99stdout:  100stderr: 
+Pathway background is estimated on 11900 random pathway values
+stderr: 
+Modular Analysis, using 100 permutations ...
+stdout:  1stdout:  2stdout:  3stdout:  4stdout:  5stdout:  6stdout:  7stdout:  8stdout:  9stdout:  10stdout:  11stdout:  12stdout:  13stdout:  14stdout:  15stdout:  16stdout:  17stdout:  18stdout:  19stdout:  20stdout:  21stdout:  22stdout:  23stdout:  24stdout:  25stdout:  26stdout:  27stdout:  28stdout:  29stdout:  30stdout:  31stdout:  32stdout:  33stdout:  34stdout:  35stdout:  36stdout:  37stdout:  38stdout:  39stdout:  40stdout:  41stdout:  42stdout:  43stdout:  44stdout:  45stdout:  46stdout:  47stdout:  48stdout:  49stdout:  50stdout:  51stdout:  52stdout:  53stdout:  54stdout:  55stdout:  56stdout:  57stdout:  58stdout:  59stdout:  60stdout:  61stdout:  62stdout:  63stdout:  64stdout:  65stdout:  66stdout:  67stdout:  68stdout:  69stdout:  70stdout:  71stdout:  72stdout:  73stdout:  74stdout:  75stdout:  76stdout:  77stdout:  78stdout:  79stdout:  80stdout:  81stdout:  82stdout:  83stdout:  84stdout:  85stdout:  86stdout:  87stdout:  88stdout:  89stdout:  90stdout:  91stdout:  92stdout:  93stdout:  94stdout:  95stdout:  96stdout:  97stdout:  98stdout:  99stdout:  100stderr: 
+Null distribution is estimated on 260 random modules
+User data yield 6 network modules
+stderr: 
+Activity network was connected in 2 steps.
+stderr: Web reporting
+stderr: 
+Finished @ Tue Mar  4 14:42:38 2025
+

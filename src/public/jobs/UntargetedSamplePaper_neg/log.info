@@ -1,0 +1,197 @@
+stderr: 03/03/2025 06:14:54 PM - INFO - 1.266s - start script: ./src/TurboPutative-2.0-built/TPWrapper.py --workdir=/home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg --workflow=123456 --infile=CMM_neg.tsv --tmfile=TM_Table_neg.tsv
+stderr: 03/03/2025 06:14:54 PM - INFO - 1.266s - Start PreProcesser
+stderr: 03/03/2025 06:14:54 PM - INFO - MSTable was read successfully: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/CMM_neg.tsv
+stderr: 03/03/2025 06:14:54 PM - INFO - MSTable columns checked successfully
+stderr: 03/03/2025 06:14:55 PM - INFO - preProcessedTable.tsv was written successfully: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/preProcessedTable.tsv
+stderr: 03/03/2025 06:14:55 PM - INFO - CMM_neg was written successfully: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/CMM_neg
+stderr: 03/03/2025 06:14:55 PM - INFO - TMTable was read successfully: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/TM_Table_neg.tsv
+stderr: 03/03/2025 06:14:55 PM - INFO - TM_table.tsv was written successfully: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/TM_table.tsv
+stderr: 03/03/2025 06:14:55 PM - INFO - TM_Table_neg was written successfully: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/TM_Table_neg
+stderr: 03/03/2025 06:14:55 PM - INFO - Config file written successfully: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/configFile.ini
+stderr: 03/03/2025 06:14:55 PM - INFO - 1.937s - End PreProcesser
+stderr: 03/03/2025 06:14:55 PM - INFO - 1.937s - Start Tagger
+stdout: 
+** Jul 20 2022 | 13:16:55 | ./TPProcesser/lib/ConfigReader.cpp[readConfigFile]:24 | Reading Tagger config file: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/configFile.ini
+** Jul 20 2022 | 13:16:55 | ./TPProcesser/lib/ConfigReader.cpp[readConfigFile]:75 | 
+** Jul 20 2022 | 13:17:02 | ./TPProcesser/lib/GenericTableHandler.cpp[readTable]:30 | Reading preProcessedTable.tsv table: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/preProcessedTable.tsv
+** Jul 20 2022 | 13:17:02 | ./TPProcesser/lib/GenericTableHandler.cpp[readTable]:67 | Table read successfully
+** Jul 20 2022 | 13:16:44 | ./TPProcesser/Tagger/Tagger.cpp[taggerFromList]:152 | ** Add Food tagging from list
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[readList]:31 | Reading Tag file: ./src/TurboPutative-2.0-built/TPProcesser/Tagger/data/food_list.tsv
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[readList]:60 | Tag file was read
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[addTag]:87 | Tag was added
+** Jul 20 2022 | 13:16:44 | ./TPProcesser/Tagger/Tagger.cpp[taggerFromRegex]:172 | Add Food tagging from regular expression
+** Jul 20 2022 | 13:16:44 | ./TPProcesser/Tagger/Tagger.cpp[taggerFromList]:152 | ** Add Drug tagging from list
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[readList]:31 | Reading Tag file: ./src/TurboPutative-2.0-built/TPProcesser/Tagger/data/drug_list.tsv
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[readList]:60 | Tag file was read
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[addTag]:87 | Tag was added
+** Jul 20 2022 | 13:16:44 | ./TPProcesser/Tagger/Tagger.cpp[taggerFromList]:152 | ** Add MDM tagging from list
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[readList]:31 | Reading Tag file: ./src/TurboPutative-2.0-built/TPProcesser/Tagger/data/microbial_list.tsv
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[readList]:60 | Tag file was read
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[addTag]:87 | Tag was added
+** Jul 20 2022 | 13:16:44 | ./TPProcesser/Tagger/Tagger.cpp[taggerFromList]:152 | ** Add NP tagging from list
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[readList]:31 | Reading Tag file: ./src/TurboPutative-2.0-built/TPProcesser/Tagger/data/natural_product_list.tsv
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[readList]:60 | Tag file was read
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[addTag]:87 | Tag was added
+** Jul 20 2022 | 13:16:44 | ./TPProcesser/Tagger/Tagger.cpp[taggerFromList]:152 | ** Add Plant tagging from list
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[readList]:31 | Reading Tag file: ./src/TurboPutative-2.0-built/TPProcesser/Tagger/data/plant_list.tsv
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[readList]:60 | Tag file was read
+** Jul 20 2022 | 13:16:47 | ./TPProcesser/Tagger/lib/TagList.cpp[addTag]:87 | Tag was added
+** Jul 20 2022 | 13:16:44 | ./TPProcesser/Tagger/Tagger.cpp[taggerFromRegex]:172 | Add x tagging from regular expression
+** Jul 20 2022 | 13:16:44 | ./TPProcesser/Tagger/Tagger.cpp[taggerFromRegex]:172 | Add Pep tagging from regular expression
+** Jul 20 2022 | 13:17:02 | ./TPProcesser/lib/GenericTableHandler.cpp[writeTable]:184 | Start writing table
+** Jul 20 2022 | 13:17:02 | ./TPProcesser/lib/GenericTableHandler.cpp[writeTable]:216 | Table was written
+stderr: 03/03/2025 06:14:59 PM - INFO - 6.378s - End Tagger
+stderr: 03/03/2025 06:14:59 PM - INFO - 6.378s - Start REname1
+stdout: 
+** Jul 20 2022 | 13:18:00 | ./TPProcesser/lib/ConfigReader.cpp[readConfigFile]:24 | Reading REname config file: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/configFile.ini
+** Jul 20 2022 | 13:18:00 | ./TPProcesser/lib/ConfigReader.cpp[readConfigFile]:75 | 
+** Jul 20 2022 | 13:18:08 | ./TPProcesser/lib/GenericTableHandler.cpp[readTable]:30 | Reading 1_Tagger.tsv table: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/1_Tagger.tsv
+** Jul 20 2022 | 13:18:08 | ./TPProcesser/lib/GenericTableHandler.cpp[readTable]:67 | Table read successfully
+** Jul 20 2022 | 13:17:38 | ./TPProcesser/REname/lib/RemoveRow.cpp[getIndexes]:20 | Analysing rows to be removed
+** Jul 20 2022 | 13:18:08 | ./TPProcesser/lib/GenericTableHandler.cpp[removeIndexes]:147 | Removing indexes
+** Jul 20 2022 | 13:18:08 | ./TPProcesser/lib/GenericTableHandler.cpp[removeIndexes]:174 | Indexes removed
+** Jul 20 2022 | 13:17:45 | ./TPProcesser/REname/lib/MapCompound.cpp[readMapFile]:21 | Reading Map File
+** Jul 20 2022 | 13:17:45 | ./TPProcesser/REname/lib/MapCompound.cpp[mapCompounds]:56 | Mapping compounds
+** Jul 20 2022 | 13:17:45 | ./TPProcesser/REname/lib/MapCompound.cpp[mapCompounds]:83 | Compounds were mapped
+** Jul 20 2022 | 13:17:45 | ./TPProcesser/REname/lib/MapCompound.cpp[writeIndexResult]:120 | Write index of mapped compounds
+** Jul 20 2022 | 13:18:08 | ./TPProcesser/lib/GenericTableHandler.cpp[writeTable]:184 | Start writing table
+** Jul 20 2022 | 13:18:08 | ./TPProcesser/lib/GenericTableHandler.cpp[writeTable]:216 | Table was written
+
+** Jul 20 2022 | 13:17:47 | ./TPProcesser/REname/lib/LipidList_and_PreProcess.cpp[findLipids]:34 | Find Goslin lipids
+** Jul 20 2022 | 13:17:47 | ./TPProcesser/REname/lib/LipidList_and_PreProcess.cpp[preProcessLipids]:76 | Pre-process Goslin Lipidsstderr: 03/03/2025 06:15:01 PM - INFO - 8.095s - End REname1
+stderr: 03/03/2025 06:15:01 PM - INFO - 8.095s - Start TPGoslin
+stderr: 03/03/2025 06:15:02 PM - INFO - 9.621s - End TPGoslin
+stderr: 03/03/2025 06:15:02 PM - INFO - 9.622s - Start REname2
+stdout: 
+** Jul 20 2022 | 13:17:44 | ./TPProcesser/lib/ConfigReader.cpp[readConfigFile]:24 | Reading REname config file: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/configFile.ini
+** Jul 20 2022 | 13:17:44 | ./TPProcesser/lib/ConfigReader.cpp[readConfigFile]:75 | 
+** Jul 20 2022 | 13:17:52 | ./TPProcesser/lib/GenericTableHandler.cpp[readTable]:30 | Reading Pre_REname_Table.tsv table: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/Pre_REname_Table.tsv
+** Jul 20 2022 | 13:17:52 | ./TPProcesser/lib/GenericTableHandler.cpp[readTable]:67 | Table read successfully
+** Jul 20 2022 | 13:17:14 | ./TPProcesser/REname/lib/RegexObject.cpp[readRegexINI]:18 | Reading ./src/TurboPutative-2.0-built/TPProcesser/REname/data/regexFAPN.ini
+** Jul 20 2022 | 13:17:14 | ./TPProcesser/REname/lib/RegexObject.cpp[applyRegex]:73 | Applying regular expressions
+** Jul 20 2022 | 13:17:14 | ./TPProcesser/REname/lib/RegexObject.cpp[applyRegex]:101 | Regular expressions were applied
+** Jul 20 2022 | 13:17:14 | ./TPProcesser/REname/lib/RegexObject.cpp[readRegexINI]:18 | Reading ./src/TurboPutative-2.0-built/TPProcesser/REname/data/regexFA.ini
+** Jul 20 2022 | 13:17:14 | ./TPProcesser/REname/lib/RegexObject.cpp[applyRegex]:73 | Applying regular expressions
+** Jul 20 2022 | 13:17:14 | ./TPProcesser/REname/lib/RegexObject.cpp[applyRegex]:101 | Regular expressions were applied
+** Jul 20 2022 | 13:17:14 | ./TPProcesser/REname/lib/RegexObject.cpp[readRegexINI]:18 | Reading ./src/TurboPutative-2.0-built/TPProcesser/REname/data/regexBA.ini
+** Jul 20 2022 | 13:17:14 | ./TPProcesser/REname/lib/RegexObject.cpp[applyRegex]:73 | Applying regular expressions
+** Jul 20 2022 | 13:17:14 | ./TPProcesser/REname/lib/RegexObject.cpp[applyRegex]:101 | Regular expressions were applied
+** Jul 20 2022 | 13:17:42 | ./TPProcesser/REname/lib/LipidMapsAbb.cpp[readLMSDTable]:16 | Reading LMSD table: ./src/TurboPutative-2.0-built/TPProcesser/REname/data/LMSD_abbreviation.tsv
+** Jul 20 2022 | 13:17:42 | ./TPProcesser/REname/lib/LipidMapsAbb.cpp[findCompounds]:60 | Searching compounds in LMSD table
+** Jul 20 2022 | 13:17:14 | ./TPProcesser/REname/lib/RegexObject.cpp[readRegexINI]:18 | Reading ./src/TurboPutative-2.0-built/TPProcesser/REname/data/regex.ini
+** Jul 20 2022 | 13:17:14 | ./TPProcesser/REname/lib/RegexObject.cpp[applyRegex]:73 | Applying regular expressions
+** Jul 20 2022 | 13:17:14 | ./TPProcesser/REname/lib/RegexObject.cpp[applyRegex]:101 | Regular expressions were applied
+** Jul 20 2022 | 13:17:23 | ./TPProcesser/REname/lib/SortPeptide.cpp[sortAA]:21 | Sorting peptides
+** Jul 20 2022 | 13:17:23 | ./TPProcesser/REname/lib/SortPeptide.cpp[sortAA]:78 | Finish sorting peptides
+** Jul 20 2022 | 13:17:52 | ./TPProcesser/lib/GenericTableHandler.cpp[fuseRows]:226 | Start row fusion
+** Jul 20 2022 | 13:17:52 | ./TPProcesser/lib/GenericTableHandler.cpp[fuseRows]:365 | End row fusion
+** Jul 20 2022 | 13:17:52 | ./TPProcesser/lib/GenericTableHandler.cpp[writeTable]:184 | Start writing table
+** Jul 20 2022 | 13:17:52 | ./TPProcesser/lib/GenericTableHandler.cpp[writeTable]:216 | Table was written
+stderr: 03/03/2025 06:15:58 PM - INFO - Creating pending file folder: /home/proteo/projects/TurboPutative-web/src/TurboPutative-2.0-built/ppGenerator/pendingFiles/4eYOz8s8nD_neg
+stderr: 03/03/2025 06:15:58 PM - INFO - 65.151s - End REname2
+stderr: 03/03/2025 06:15:58 PM - INFO - 65.152s - Start RowMerger
+stdout: 
+** Jul 20 2022 | 13:17:48 | ./TPProcesser/lib/ConfigReader.cpp[readConfigFile]:24 | Reading RowMerger config file: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/configFile.ini
+** Jul 20 2022 | 13:17:48 | ./TPProcesser/lib/ConfigReader.cpp[readConfigFile]:75 | 
+** Jul 20 2022 | 13:17:58 | ./TPProcesser/lib/GenericTableHandler.cpp[readTable]:30 | Reading 2_REname.tsv table: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/2_REname.tsv
+** Jul 20 2022 | 13:17:58 | ./TPProcesser/lib/GenericTableHandler.cpp[readTable]:67 | Table read successfully
+** Jul 20 2022 | 13:17:58 | ./TPProcesser/lib/GenericTableHandler.cpp[fuseRows]:226 | Start row fusion
+** Jul 20 2022 | 13:17:58 | ./TPProcesser/lib/GenericTableHandler.cpp[fuseRows]:365 | End row fusion
+** Jul 20 2022 | 13:17:58 | ./TPProcesser/lib/GenericTableHandler.cpp[writeTable]:184 | Start writing table
+** Jul 20 2022 | 13:17:58 | ./TPProcesser/lib/GenericTableHandler.cpp[writeTable]:216 | Table was written
+stderr: 03/03/2025 06:15:58 PM - INFO - 65.469s - End RowMerger
+stderr: 03/03/2025 06:15:58 PM - INFO - 65.469s - Start TableMerger
+stdout: 
+** Jul 20 2022 | 13:17:59 | ./TPProcesser/lib/ConfigReader.cpp[readConfigFile]:24 | Reading TableMerger config file: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/configFile.ini
+** Jul 20 2022 | 13:17:59 | ./TPProcesser/lib/ConfigReader.cpp[readConfigFile]:75 | 
+** Jul 20 2022 | 13:18:08 | ./TPProcesser/lib/GenericTableHandler.cpp[readTable]:30 | Reading 3_RowMerger.tsv table: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/3_RowMerger.tsv
+** Jul 20 2022 | 13:18:08 | ./TPProcesser/lib/GenericTableHandler.cpp[readTable]:67 | Table read successfully
+** Jul 20 2022 | 13:18:08 | ./TPProcesser/lib/GenericTableHandler.cpp[readTable]:30 | Reading TM_table.tsv table: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/TM_table.tsv
+** Jul 20 2022 | 13:18:08 | ./TPProcesser/lib/GenericTableHandler.cpp[readTable]:67 | Table read successfullystderr: 03/03/2025 06:15:59 PM - INFO - 65.798s - End TableMerger
+stderr: 03/03/2025 06:15:59 PM - INFO - 65.798s - Start TPMetrics
+stderr: 03/03/2025 06:15:59 PM - INFO - Initializing TPMetrics object
+stderr: 03/03/2025 06:15:59 PM - INFO - TPMetrics object initialized
+stderr: 03/03/2025 06:15:59 PM - INFO - Identify associated annotations based on _TP-Molecular Weight
+stderr: 03/03/2025 06:16:08 PM - INFO - Identify associated annotations based on TP_Class
+stderr: 03/03/2025 06:16:20 PM - INFO - Calculating correlations under the null hypothesis
+stderr: 03/03/2025 06:16:20 PM - INFO - Calculating score based on maximum correlation: TP_max_corr1_score
+stderr: 03/03/2025 06:16:22 PM - INFO - Calculating score based on maximum correlation: TP_max_corr2_score
+stderr: 03/03/2025 06:16:22 PM - INFO - Calculating score based on sum of all correlations
+stderr: 03/03/2025 06:16:23 PM - INFO - Calculating score based on sum of all correlations
+stderr: 03/03/2025 06:16:25 PM - INFO - Combining scores based on maximum and addition of correlations
+stderr: 03/03/2025 06:16:26 PM - INFO - Identify group of annotations providing the maximum score
+stderr: 03/03/2025 06:16:26 PM - INFO - Identify group of annotations providing the maximum score
+stderr: 03/03/2025 06:16:26 PM - INFO - Calculate final score and apply error penalty
+stderr: 03/03/2025 06:16:26 PM - INFO - Writing output file: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/4_TPMetrics.tsv
+stderr: 03/03/2025 06:16:26 PM - INFO - 93.282s - End TPMetrics
+stderr: 03/03/2025 06:16:26 PM - INFO - 93.283s - Start TPFilter
+03/03/2025 06:16:26 PM - INFO - Filtering table
+stderr: 03/03/2025 06:16:29 PM - INFO - Writing output file: /home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/4_TPFilter.tsv
+stderr: 03/03/2025 06:16:29 PM - INFO - 95.842s - End TPFilter
+stderr: 03/03/2025 06:16:29 PM - INFO - 95.842s - Start PostProcesser
+stderr: 03/03/2025 06:16:29 PM - INFO - Table was added: CMM_neg.tsv
+stderr: 03/03/2025 06:16:29 PM - INFO - Table was added: TM_Table_neg.tsv
+stderr: 03/03/2025 06:16:29 PM - INFO - Reading table: 1_Tagger.tsv
+stderr: 03/03/2025 06:16:29 PM - INFO - Table read
+stderr: 03/03/2025 06:16:29 PM - INFO - Writing table: 1_Tagger.tsv
+stderr: 03/03/2025 06:16:29 PM - INFO - Table written
+stderr: 03/03/2025 06:16:29 PM - INFO - Table was added: 1_Tagger.tsv
+stderr: 03/03/2025 06:16:29 PM - INFO - Reading table: 2_REname.tsv
+stderr: 03/03/2025 06:16:29 PM - INFO - Table read
+stderr: 03/03/2025 06:16:29 PM - INFO - Writing table: 2_REname.tsv
+stderr: 03/03/2025 06:16:29 PM - INFO - Table written
+stderr: 03/03/2025 06:16:29 PM - INFO - Table was added: 2_REname.tsv
+stderr: 03/03/2025 06:16:29 PM - INFO - Reading table: 3_RowMerger.tsv
+stderr: 03/03/2025 06:16:29 PM - INFO - Table read
+stderr: 03/03/2025 06:16:29 PM - INFO - Writing table: 3_RowMerger.tsv
+stderr: 03/03/2025 06:16:29 PM - INFO - Table written
+stderr: 03/03/2025 06:16:29 PM - INFO - Table was added: 3_RowMerger.tsv
+stderr: 03/03/2025 06:16:29 PM - INFO - Reading table: 4_TPMetrics.tsv
+stderr: 03/03/2025 06:16:29 PM - INFO - Table read
+stderr: 03/03/2025 06:16:29 PM - INFO - Writing table: 4_TPMetrics.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Table written
+stderr: 03/03/2025 06:16:30 PM - INFO - Table was added: 4_TPMetrics.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Reading table: 4_TPFilter.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Table read
+stderr: 03/03/2025 06:16:30 PM - INFO - Writing table: 4_TPFilter.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Table written
+stderr: 03/03/2025 06:16:30 PM - INFO - Table was added: 4_TPFilter.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Final tables were generated
+stderr: 03/03/2025 06:16:30 PM - INFO - Make a zip with all result files
+stderr: 03/03/2025 06:16:30 PM - INFO - Zip was created: TurboPutative_results.zip
+stderr: 03/03/2025 06:16:30 PM - INFO - 97.012s - End PostProcesser
+03/03/2025 06:16:30 PM - INFO - Creating extension folder: ini
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to ini folder: regex.ini
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to ini folder: configUser.ini
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to ini folder: configFile.ini
+stderr: 03/03/2025 06:16:30 PM - INFO - Creating extension folder: tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to tsv folder: preProcessedTable.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to tsv folder: TM_table.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to tsv folder: 1_Tagger.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to tsv folder: Pre_REname_Table.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to tsv folder: 2_REname.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to tsv folder: 3_RowMerger.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to tsv folder: 4_TableMerger.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to tsv folder: 4_TPMetrics.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to tsv folder: 4_TPFilter.tsv
+stderr: 03/03/2025 06:16:30 PM - INFO - Creating extension folder: html
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to html folder: CMM_neg.html
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to html folder: TM_Table_neg.html
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to html folder: 1_Tagger_CMM_neg.html
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to html folder: 2_REname_CMM_neg.html
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to html folder: 3_RowMerger_CMM_neg.html
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to html folder: 4_TPMetrics_CMM_neg.html
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to html folder: 4_TPFilter_CMM_neg.html
+stderr: 03/03/2025 06:16:30 PM - INFO - Creating extension folder: row
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to row folder: CMM_neg.row
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to row folder: TM_Table_neg.row
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to row folder: 1_Tagger_CMM_neg.row
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to row folder: 2_REname_CMM_neg.row
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to row folder: 3_RowMerger_CMM_neg.row
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to row folder: 4_TPMetrics_CMM_neg.row
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to row folder: 4_TPFilter_CMM_neg.row
+stderr: 03/03/2025 06:16:30 PM - INFO - Creating extension folder: json
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to json folder: type2basename.json
+stderr: 03/03/2025 06:16:30 PM - INFO - Creating extension folder: log
+stderr: 03/03/2025 06:16:30 PM - INFO - Move file to log folder: TPGoslin.log
+stderr: 03/03/2025 06:16:30 PM - INFO - 97.027s - end script

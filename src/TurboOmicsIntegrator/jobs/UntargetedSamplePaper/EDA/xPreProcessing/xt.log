@@ -1,0 +1,6 @@
+stdout: 2025-03-03 16:20:09,696 - INFO - Start main
+stdout: 2025-03-03 16:20:09,696 - INFO - Reading input file from /home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/xt.json
+stdout: 2025-03-03 16:20:18,869 - INFO - Filtering using missing value threshold: 0.2
+stdout: 2025-03-03 16:20:18,874 - INFO - Centering and scaling data by columns
+stdout: 2025-03-03 16:20:19,076 - INFO - Saved preprocessed data to /home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/xt_norm.json
+stdout: 2025-03-03 16:20:19,077 - INFO - End

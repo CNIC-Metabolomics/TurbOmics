@@ -1,0 +1,7 @@
+stdout: 2025-03-03 16:20:09,696 - INFO - Start main
+2025-03-03 16:20:09,696 - INFO - Reading input file from /home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/xm.json
+stdout: 2025-03-03 16:20:11,731 - INFO - Filtering using missing value threshold: 0.2
+stdout: 2025-03-03 16:20:11,734 - INFO - Centering and scaling data by columns
+stdout: 2025-03-03 16:20:11,775 - INFO - Imputing missing values using KNN method
+stdout: 2025-03-03 16:20:12,371 - INFO - Saved preprocessed data to /home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/xm_norm.json
+stdout: 2025-03-03 16:20:12,372 - INFO - End

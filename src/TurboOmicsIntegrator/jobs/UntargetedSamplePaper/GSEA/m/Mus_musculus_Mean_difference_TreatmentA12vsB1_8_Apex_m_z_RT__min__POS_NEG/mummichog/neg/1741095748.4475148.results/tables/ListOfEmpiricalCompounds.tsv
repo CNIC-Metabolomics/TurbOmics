@@ -1,0 +1,34 @@
+EID	massfeature_rows	str_row_ion	compounds	compound_names
+E6	row28;row69	row28_M-H[-];row69_M-H[-]	C05122;C15516	taurocholic acid$Taurohyocholate; N-(3alpha,6alpha,7alpha-Trihydroxy-5beta-cholan-24-oyl)taurine
+E7	row28;row69;row90	row28_M-H+O[-];row69_M-H+O[-];row90_M-H[-]	C05463;C05465	Taurodeoxycholate$Taurochenodeoxycholate; Chenodeoxycholoyltaurine
+E8	row29	row29_M-H2O-H[-]	C05490	11-Dehydrocorticosterone
+E11	row37	row37_M-H2O-H[-]	CE6429;CE6423;CE6420;CE6426;CE6438;CE6432;CE6435	$$$$$$
+E17	row121;row85	row121_M+CH3COO[-];row85_M-H[-]	C02737	Phosphatidylserine
+E21	row606;row607	row606_M-H[-];row607_M-H+O[-]	C00712	(9Z)-Octadecenoic acid; (Z)-Octadec-9-enoic acid; Oleate; Oleic acid
+E22	row101	row101_M-H[-]	C00712	(9Z)-Octadecenoic acid; (Z)-Octadec-9-enoic acid; Oleate; Oleic acid
+E24	row120;row141;row163	row120_M-H[-];row141_M-H[-];row163_M+HCOO[-]	C00695	Cholate
+E27	row122	row122_M-H[-]	C14762;C14826;C14825	13(S)-HODE; (13S)-Hydroxyoctadecadienoic acid; (9Z, 11E)-(13S)-13-Hydroxyoctadeca-9,11-dienoic acid$12(13)-EpOME; (12R,13S)-(9Z)-12,13-Epoxyoctadecenoic acid$9(10)-EpOME; (9R,10S)-(12Z)-9,10-Epoxyoctadecenoic acid
+E28	row192	row192_M-H[-]	C14762;C14826;C14825	13(S)-HODE; (13S)-Hydroxyoctadecadienoic acid; (9Z, 11E)-(13S)-13-Hydroxyoctadeca-9,11-dienoic acid$12(13)-EpOME; (12R,13S)-(9Z)-12,13-Epoxyoctadecenoic acid$9(10)-EpOME; (9R,10S)-(12Z)-9,10-Epoxyoctadecenoic acid
+E31	row638	row638_M-H[-]	C01595	linoleic acid (all cis C18:2) n-6
+E32	row455	row455_M-2H[2-]	C15647	2-Acyl-1-(1-alkenyl)-sn-glycero-3-phosphate
+E33	row127	row127_M-2H[2-]	C15647	2-Acyl-1-(1-alkenyl)-sn-glycero-3-phosphate
+E36	row455	row455_M-H[-]	C06429	(4Z,7Z,10Z,13Z,16Z,19Z)-Docosahexaenoic acid; 4,7,10,13,16,19-Docosahexaenoic acid; Docosahexaenoic acid
+E37	row127	row127_M-H[-]	C06429	(4Z,7Z,10Z,13Z,16Z,19Z)-Docosahexaenoic acid; 4,7,10,13,16,19-Docosahexaenoic acid; Docosahexaenoic acid
+E41	row221;row622	row221_M-H[-];row622_M-H+O[-]	C00219	arachidonic acid
+E42	row157	row157_M-H[-]	C00219	arachidonic acid
+E53	row283	row283_M-H2O-H[-]	C05791	D-Urobilinogen
+E58	row538	row538_M-H[-]	C00249	Hexadecanoate (n-C16:0)
+E59	row288	row288_M-H[-]	C00249	Hexadecanoate (n-C16:0)
+E68	row356	row356_M-H[-]	C03242	(8Z,11Z,14Z)-Icosatrienoic acid; Dihomo-gamma-linolenic acid; (Z,Z,Z)-8,11,14-Eicosatrienoic acid; (Z,Z,Z)-8,11,14-Icosatrienoic acid; (Z,Z,Z)-8,11,14-Eicosatrienoate; (Z,Z,Z)-8,11,14-Icosatrienoate; 8,11,14-Eicosatrienoate; 8,11,14-Icosatrienoate
+E70	row359;row592	row359_M+CH3COO[-];row592_M-H[-]	C05454;C05444	3alpha,7alpha,12alpha-Trihydroxy-5beta-cholestane$3alpha,7alpha,26-Trihydroxy-5beta-cholestane; 5beta-Cholestane-3alpha,7alpha,26-triol
+E74	row369	row369_M-H2O-H[-]	CE5994	20-oxo-leukotriene E4
+E75	row378	row378_M-H2O-H[-]	CE2915	beta-casomorphin
+E81	row649	row649_M-H[-]	CE4980	Prostaglandin PGE2 glyceryl ester
+E94	row533	row533_M-H[-]	C05476	Tetrahydrocorticosterone
+E100	row566	row566_M-H[-]	C01530	octadecanoate (n-C18:0)
+E101	row596	row596_M-H[-]	C01530	octadecanoate (n-C18:0)
+E110	row622	row622_M-H[-]	C04805;C04742;C14749;C14748;C14778;C14770;C14771;C14769;C14768;CE5016	5-Hydroxyeicosatetraenoate$(15S)-15-Hydroxy-5,8,11-cis-13-trans-eicosatetraenoate; (15S)-15-Hydroxy-5,8,11-cis-13-trans-icosatetraenoate; (5Z,8Z,11Z,13E)-(15S)-15-Hydroxyicosa-5,8,11,13-tetraenoic acid; 15(S)-HETE$19(S)-HETE; (19S)-Hydroxyeicosatetraenoic acid; (19S)-Hydroxyicosatetraenoic acid; (19S)-Hydroxy arachidonic acid$20-Hydroxyeicosatetraenoic acid$16(R)-HETE; (5Z,8Z,11Z,14Z)-(16R)-16-Hydroxyeicosa-5,8,11,14-tetraenoic acid; (5Z,8Z,11Z,14Z)-(16R)-16-Hydroxyicosa-5,8,11,14-tetraenoic acid$11,12-EET$14,15-EET; (5Z,8Z,11Z)-14,15-Epoxyeicosa-5.8.11-trienoic acid; (5Z,8Z,11Z)-14,15-Epoxyicosa-5.8.11-trienoic acid$8,9-EET; (5Z,11Z,14Z)-8,9-Epoxyeicosa-5,11,14-trienoic acid; (5Z,11Z,14Z)-8,9-Epoxyicosa-5,11,14-trienoic acid$5,6-EET; (8Z,11Z,14Z)-5,6-Epoxyeicosa-8,11,14-trienoic acid; (8Z,11Z,14Z)-5,6-Epoxyicosa-8,11,14-trienoic acid$13,14-dihydroxy-retinol
+E112	row622	row622_M-H2O-H[-]	C14774;C14775;C14772;C14773	11,12-DHET$14,15-DHET; (5Z,8Z,11Z)-14,15-Dihydroxyeicosa-5,8,11-trienoic acid; (5Z,8Z,11Z)-14,15-Dihydroxyicosa-5,8,11-trienoic acid$5,6-DHET; (8Z,11Z,14Z)-5,6-Dihydroxyeicosa-8,11,14-trienoic acid; (8Z,11Z,14Z)-5,6-Dihydroxyicosa-8,11,14-trienoic acid$8,9-DHET; (5Z,11Z,14Z)-8,9-Dihydroxyeicosa-5,11,14-trienoic acid; (5Z,11Z,14Z)-8,9-Dihydroxyicosa-5,11,14-trienoic acid
+E121	row652	row652_M-2H[2-]	C11821	5-Hydroxyisourate
+E130	row703	row703_M-H[-]	C04843;C04741;C05959;C14814;C00639;C14782	(5Z,9E,14Z)-(8xi,11xi,12S)-8,11,12-Trihydroxyicosa-5,9,14-trienoate; (5Z,9E,14Z)-(8xi,11xi,12S)-8,11,12-Trihydroxyicosa-5,9,14-trienoic acid; Trioxilin A3$Alprostadil; Prostaglandin E1; (13E)-(15S)-11alpha,15-Dihydroxy-9-oxoprost-13-enoate$11-epi-Prostaglandin F2alpha; 11-epi-Prostaglandin F2a; 11-epi-PGF2alpha; 11-epi-PGF2a$11,14,15-THETA; 11,14,15-Trihydroxyicosatrienoic acid; (5Z,8Z,12E)-11,14,15-Trihydroxyeicosa-5,8,12-trienoic acid; (5Z,8Z,12E)-11,14,15-Trihydroxyicosa-5,8,12-trienoic acid$Prostaglandin F2alpha; (5Z,13E)-(15S)-9alpha,11alpha,15-Trihydroxyprosta-5,13-dienoate; (+)-Prostaglandin F2a; 7-[3,5-Dihydroxy-2-(3-hydroxy-1-octenyl)cyclopentyl]-5-heptenoic acid; 9a,11a-PGF2; Amoglandin; Cyclosin; Dinoprost; Enzaprost; Enzaprost F; Panacelan; PGF2a; 9,11,15-Trihydroxy-(5Z,9a,11a,13E,15S)-prosta-5,13-dien-1-oic acid; Prostaglandin F2a; Prostin F 2 alpha; Protamodin; U 14583$11,12,15-THETA; 11,12,15-Trihydroxyicosatrienoic acid; (5Z,8Z,13E)-(15S)-11,12,15-Trihydroxyeicosa-5,8,12-trienoic acid; (5Z,8Z,13E)-(15S)-11,12,15-Trihydroxyicosa-5,8,12-trienoic acid
+E133	row709	row709_M-H[-]	CE2962	rac-4-hydroxy-4-O-(beta-D-glucuronide)-all-trans-retinyl acetate

@@ -1,0 +1,56 @@
+2025-03-03 - 15:20:08.361 - Creating job: 4eYOz8s8nD
+2025-03-03 - 15:20:08.364 - Centering and scaling data
+2025-03-03 - 15:20:12.483 - Metabolomic data was preprocessed
+2025-03-03 - 15:20:13.059 - Proteomic data was preprocessed
+2025-03-03 - 15:20:19.184 - Transcriptomic data was preprocessed
+2025-03-03 - 15:20:19.304 - Writing job files
+2025-03-03 - 15:20:19.354 - Executing PCA_ANOVA_PY in t omic
+2025-03-03 - 15:20:19.367 - Executing PCA_ANOVA_PY in m omic
+2025-03-03 - 15:20:19.376 - Executing PCA_ANOVA_PY in q omic
+2025-03-03 - 15:20:19.399 - Executing MOFA_ANOVA_PY
+2025-03-03 - 15:20:24.668 - pca_anova_analysis.py process in m omic exited with code 0
+2025-03-03 - 15:20:25.429 - pca_anova_analysis.py process in q omic exited with code 0
+2025-03-03 - 15:20:30.194 - pca_anova_analysis.py process in t omic exited with code 0
+2025-03-03 - 15:20:40.318 - annParams.json was written
+2025-03-03 - 15:20:41.356 - mofa_anova_analysis.py process exited with code 0
+2025-03-03 - 16:47:13.366 - CMM_pos received
+2025-03-03 - 16:47:13.368 - Run script: python /home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/scripts/py/preTurboPutative.py --xm=/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/xm_norm.json --m2i=/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/m2i.json --index=/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/index.json --ann=/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/CMM_TP/annParams.json --cmm=/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/CMM_TP/pos/CMM_pos.json --ion_mode=pos --tpfolder=/home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_pos
+2025-03-03 - 16:47:19.505 - preTurboPutative was executed with CMM_pos
+2025-03-03 - 17:14:49.798 - CMM_neg received
+2025-03-03 - 17:14:49.810 - Run script: python /home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/scripts/py/preTurboPutative.py --xm=/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/xm_norm.json --m2i=/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/m2i.json --index=/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/index.json --ann=/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/CMM_TP/annParams.json --cmm=/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/CMM_TP/neg/CMM_neg.json --ion_mode=neg --tpfolder=/home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg
+2025-03-03 - 17:14:53.226 - preTurboPutative was executed with CMM_neg
+2025-03-03 - 17:15:09.769 - Get TurboPutative results: id=4eYOz8s8nD, ionMode=pos_neg
+2025-03-03 - 17:15:29.787 - Get TurboPutative results: id=4eYOz8s8nD, ionMode=pos_neg
+2025-03-03 - 17:15:49.784 - Get TurboPutative results: id=4eYOz8s8nD, ionMode=pos_neg
+2025-03-03 - 17:16:09.781 - Get TurboPutative results: id=4eYOz8s8nD, ionMode=pos_neg
+2025-03-03 - 17:17:10.775 - Get TurboPutative results: id=4eYOz8s8nD, ionMode=pos_neg
+2025-03-03 - 17:17:10.775 - Run script: python /home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/scripts/py/addTPFilter.py --tpfilter=/home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_pos/tsv/4_TPFilter.tsv --tpfilter=/home/proteo/projects/TurboPutative-web/src/public/jobs/4eYOz8s8nD_neg/tsv/4_TPFilter.tsv --m2i=/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/m2i.json --m2itp=/home/proteo/projects/TurboPutative-web/src/TurboOmicsIntegrator/jobs/4eYOz8s8nD/EDA/xPreProcessing/m2iTP.json
+2025-03-03 - 17:17:16.102 - TPFilter table was added
+2025-03-04 - 09:17:00.467 - Getting MOFA data
+2025-03-04 - 09:17:00.472 - MOFA files exist. Read and send
+2025-03-04 - 15:07:05.512 - Getting MOFA data
+2025-03-04 - 15:07:05.513 - MOFA files exist. Read and send
+2025-03-05 - 14:06:07.608 - Getting EDA-PCA (t) data
+2025-03-05 - 14:06:07.611 - Getting EDA-PCA (m) data
+2025-03-05 - 14:06:07.612 - Getting EDA-PCA (q) data
+2025-03-05 - 14:06:07.613 - EDA-PCA (t) files exist. Read and send
+2025-03-05 - 14:06:07.614 - EDA-PCA (m) files exist. Read and send
+2025-03-05 - 14:06:07.614 - EDA-PCA (q) files exist. Read and send
+2025-03-11 - 11:17:03.244 - Getting MOFA data
+2025-03-11 - 11:17:03.245 - MOFA files exist. Read and send
+2025-03-11 - 11:31:46.811 - Getting EDA-PCA (t) data
+2025-03-11 - 11:31:46.812 - EDA-PCA (t) files exist. Read and send
+2025-03-11 - 11:31:46.917 - Getting EDA-PCA (m) data
+2025-03-11 - 11:31:46.918 - Getting EDA-PCA (q) data
+2025-03-11 - 11:31:46.920 - EDA-PCA (m) files exist. Read and send
+2025-03-11 - 11:31:46.921 - EDA-PCA (q) files exist. Read and send
+2025-03-13 - 13:44:59.666 - Getting MOFA data
+2025-03-13 - 13:44:59.667 - MOFA files exist. Read and send
+2025-03-25 - 08:06:12.425 - Getting MOFA data
+2025-03-25 - 08:06:12.426 - MOFA files exist. Read and send
+2025-03-25 - 08:06:48.879 - Getting EDA-PCA (t) data
+2025-03-25 - 08:06:48.880 - EDA-PCA (t) files exist. Read and send
+2025-03-25 - 08:06:48.882 - Getting EDA-PCA (m) data
+2025-03-25 - 08:06:48.883 - Getting EDA-PCA (q) data
+2025-03-25 - 08:06:48.884 - EDA-PCA (m) files exist. Read and send
+2025-03-25 - 08:06:48.884 - EDA-PCA (q) files exist. Read and send
