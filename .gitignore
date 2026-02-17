@@ -2,12 +2,16 @@
 package-lock.json
 logs/*
 node_modules/*
-src/public/jobs/* 
-!src/public/jobs/sample/
 **/__pycache__
 tests
 env
 env_pathwayintegrate
 src/public/REnameMapTables/*.zip
 src/TurboPutative-2.0-built/TPProcesser/REname/data/preProcessedNames.tsv
-src/TurboOmicsIntegrator/jobs/4eYOz8s8nD
+
+# Untargeted sample data from the paper
+src/public/jobs/* 
+!src/public/jobs/UntargetedSamplePaper_pos
+!src/public/jobs/UntargetedSamplePaper_neg
+src/TurboOmicsIntegrator/jobs/*
+!src/TurboOmicsIntegrator/jobs/UntargetedSamplePaper
