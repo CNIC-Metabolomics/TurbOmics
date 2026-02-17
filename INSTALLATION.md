@@ -1,46 +1,108 @@
 # TurbOmis/TurboPutative Installation
 
-## Requeriments 
+## Requirements
 
-+ Python 3.11. At the moment, we cannot upgrade further because some older packages (including certain versions of sspa) are not fully compatible with Python 3.12 yet.
-+ R 4.5 or higher
-+ Node.js
-+ Install PM2 globally:
+### System Requirements
+
+* **Python 3.11**
+  At the moment, we cannot upgrade further because some older packages (including certain versions of sspa) are not fully compatible with Python 3.12 yet.
+* **R 4.5 or higher**
+* **Node.js**
+* **Git**
+* **Git LFS (Large File Storage)**
+
+## Install Git and Git LFS
+
+### 1. Install Git
+
+#### RHEL / CentOS / Rocky
+
+```bash
+sudo dnf install git
+```
+
+### 2. Install Git LFS
+
+#### RHEL / CentOS / Rocky
+
+```bash
+sudo dnf install git-lfs
+```
+
+After installation, initialize Git LFS:
+
+```bash
+git lfs install
+```
+
+> Git LFS is required to correctly download large JSON and ZIP files tracked in this repository.
+> Without Git LFS, large files will appear as small pointer text files.
+
+# Clone the Repository (IMPORTANT)
+
+Because this project uses Git LFS, follow these steps:
+
+```bash
+git clone https://github.com/CNIC-Metabolomics/TurbOmics.git
+cd TurbOmics
+git lfs install
+git lfs pull
+```
+
+This ensures that all large files (e.g., large `.json` and `.zip` files) are properly downloaded.
+
+You can verify LFS files with:
+
+```bash
+git lfs ls-files
+```
+
+If you see large files listed, Git LFS is working correctly.
+
+
+# Install Node.js Dependencies
+
+Install PM2 globally:
+
 ```bash
 npm install -g pm2
 ```
 
-## Install ModeJs dependencies
+Install project dependencies:
 
 ```bash
 npm install
 ```
 
-## Install Python Requirements
+# Install Python Requirements
 
 Two separate virtual environments are required because **PathwayIntegrate** depends on a dedicated set of package versions.
 
-### 1. Environment for MOFA2 and Mummichog
+## 1. Environment for MOFA2 and Mummichog
 
 Open a terminal (shell) and create the virtual environment:
+
 ```bash
 python -m venv env
 ```
 
 Activate it and install the required packages:
+
 ```bash
 source env/bin/activate
 pip install -r python_requirements.txt
 ```
 
-### 2. Environment for PathwayIntegrate
+## 2. Environment for PathwayIntegrate
 
-Open a new terninal (shell) and create a separate virtual environment:
+Open a new terminal (shell) and create a separate virtual environment:
+
 ```bash
 python -m venv env_pathwayintegrate
 ```
 
 Activate it and install the required packages:
+
 ```bash
 source env_pathwayintegrate/bin/activate
 pip install -r python_requirements_PathIntegrate.txt
@@ -48,44 +110,49 @@ pip install -r python_requirements_PathIntegrate.txt
 
 > Make sure to activate the appropriate environment before running each tool.
 
-
-## Install R requirements
+# Install R Requirements
 
 ```bash
 Rscript installation-R-dependences.R
 ```
 
-
 # Getting Started
 
-+ Start the application using the ecosystem file
+### Start the application using the ecosystem file
+
 ```bash
 pm2 start ecosystem.config.js
 ```
 
 If it's already running:
+
 ```bash
 pm2 restart ecosystem.config.js
 ```
-or reload safely:
+
+Or reload safely:
+
 ```bash
 pm2 reload ecosystem.config.js
-``` 
+```
 
-+ Verify the flags are applied
+### Verify the process status
+
 ```bash
 pm2 show turbomics
 ```
 
-+ Where to see the traces
+### View logs
+
 ```bash
 pm2 logs turbomics
 ```
+
 or directly:
+
 ```bash
 tail -f ./logs/error.log
 ```
-
 
 # File Structure Description
 
