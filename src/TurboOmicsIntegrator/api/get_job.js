@@ -14,9 +14,11 @@ Return:
     - JSON vacío si el trabajo no tiene resultados
 */
 router.get('/search/:jobID', async (req, res) => {
-    console.log(`Searching job: ${req.params.jobID}`);
+    const jobID = req.params.jobID;
 
-    const myPath = path.join(__dirname, '../jobs', req.params.jobID);
+    console.log(`Searching job: ${jobID}`);
+
+    const myPath = path.join(__dirname, '../jobs', jobID);
     const myPathx = path.join(myPath, 'EDA/xPreProcessing');
     const myPathCMM = path.join(myPath, 'CMM_TP');
 
@@ -51,7 +53,21 @@ router.get('/search/:jobID', async (req, res) => {
         if (fs.existsSync(path.join(myPathx, 'm2iTP.json'))) {
             jobContext.annParams.status = 'ok';
             //jobContext.user.m2i = await myReadFn(path.join(myPathx, 'm2iTP.json'));
+
+            // important!!: force and overwrite the annotation Status
+            jobContext.annStatus = 'ok';
         }
+
+        // Check if we have the TP results
+        if (fs.existsSync(path.join(myPathCMM, 'pos', 'CMM_pos.json'))) {
+            jobContext.annParams.CMM_pos = await myReadFn(path.join(myPathCMM, 'pos', 'CMM_pos.json'));
+            jobContext.annParams.TP_pos = `${jobID}_pos`;
+        }
+        if (fs.existsSync(path.join(myPathCMM, 'neg', 'CMM_neg.json'))) {
+            jobContext.annParams.CMM_neg = await myReadFn(path.join(myPathCMM, 'neg', 'CMM_neg.json'));
+            jobContext.annParams.TP_neg = `${jobID}_neg`;
+        }
+
     }
 
     res.json({ exist: true, jobContext });
