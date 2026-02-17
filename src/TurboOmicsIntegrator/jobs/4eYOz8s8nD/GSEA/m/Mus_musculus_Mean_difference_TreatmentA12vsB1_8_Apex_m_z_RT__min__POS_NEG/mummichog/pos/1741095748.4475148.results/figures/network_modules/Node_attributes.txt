@@ -1,0 +1,37 @@
+CPD_ID	CPD_NAME	mz_row_Statistic	From_mz_row	From_EmpiricalCompound
+C00319	Sphingosine	-1.3077174597	row381	E110
+C00350	Phosphatidylethanolamine	-1.5155196347333333	row98	E22
+C11455	4,4-Dimethyl-5alpha-cholesta-8,14,24-trien-3beta-ol	-1.4378606817666668	row56	E12
+C02990	L-Palmitoylcarnitine	1.4781068327499998	row1577	E209
+CE2321	cholesta-5,7,24-trien-3beta-ol	-1.3204578233166668	row1917	E331
+C11508	4alpha-Methyl-5alpha-ergosta-8,14,24(28)-trien-3beta-ol; delta8,14 -Sterol	-1.4378606817666668	row56	E12
+C02934	3-Dehydrosphinganine	1.4579160110833334	row1584	E112
+C11455	4,4-Dimethyl-5alpha-cholesta-8,14,24-trien-3beta-ol	-1.5126998421833333	row1263	E12
+C11455	4,4-Dimethyl-5alpha-cholesta-8,14,24-trien-3beta-ol	1.69422211375	row1552	E14
+44mctr	4,4-dimethylcholesta-8,14,24-trienol	-1.4378606817666668	row56	E12
+C02990	L-Palmitoylcarnitine	1.2333376020333333	row2117	E207
+C00319	Sphingosine	1.4579160110833334	row1584	E112
+C11508	4alpha-Methyl-5alpha-ergosta-8,14,24(28)-trien-3beta-ol; delta8,14 -Sterol	-1.5126998421833333	row1263	E12
+C02737	Phosphatidylserine	1.7641909138833332	row632	E2
+C11508	4alpha-Methyl-5alpha-ergosta-8,14,24(28)-trien-3beta-ol; delta8,14 -Sterol	1.69422211375	row1552	E14
+C05107	7-Dehydrodesmosterol	-1.3204578233166668	row1917	E331
+C02737	Phosphatidylserine	1.3103673552000001	row961	E2
+C02990	L-Palmitoylcarnitine	1.4883280501999998	row1946	E207
+44mctr	4,4-dimethylcholesta-8,14,24-trienol	-1.5126998421833333	row1263	E12
+44mctr	4,4-dimethylcholesta-8,14,24-trienol	1.69422211375	row1552	E14
+C12144	Phytosphingosine; 4-D-Hydroxysphinganine	-1.2744805131999999	row401	E106
+CE2591	trans,cis-hexadeca-2,9-dienoyl-CoA	1.3846025882166666	row1608	E351
+C15783	5-Dehydroavenasterol	-1.4378606817666668	row56	E12
+C02934	3-Dehydrosphinganine	-1.2744805131999999	row401	E110
+nrvnccrn	Nervonyl carnitine	-1.6942937750333331	row674	E143
+C02934	3-Dehydrosphinganine	-1.4975829541833334	row1842	E110
+C02934	3-Dehydrosphinganine	1.5399162771500003	row442	E112
+C05849	Vitamin K1 epoxide; (2,3-Epoxyphytyl)menaquinone; 2,3-Epoxy-2,3-dihydro-2-methyl-3-phytyl-1,4-naphthoquinone; 2,3-Epoxyphylloquinone; 1a,7a-Dihydro-1a-methyl-7a-(3,7,11,15-tetramethyl-2-hexadecenyl)-naphth[2,3-b]oxirene-2,7-dione; Phylloquinone oxide; Phylloquinone epoxide; Phylloquinone-2,3-epoxide; Vitamin K1 2,3-epoxide; Vitamin K1 oxide	1.6402555156333332	row2211	E324
+C12144	Phytosphingosine; 4-D-Hydroxysphinganine	-1.3077174597	row381	E106
+CE0849	cis,cis-palmito-7,10-dienoyl-CoA	1.3846025882166666	row1608	E351
+C00319	Sphingosine	-1.4975829541833334	row1842	E110
+C00319	Sphingosine	-1.2744805131999999	row401	E110
+C15783	5-Dehydroavenasterol	-1.5126998421833333	row1263	E12
+C00319	Sphingosine	1.5399162771500003	row442	E112
+C15783	5-Dehydroavenasterol	1.69422211375	row1552	E14
+C02934	3-Dehydrosphinganine	-1.3077174597	row381	E110
