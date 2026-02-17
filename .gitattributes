@@ -1,3 +1,5 @@
 src/public/jobs/UntargetedSamplePaper_pos/TurboPutative_results.zip filter=lfs diff=lfs merge=lfs -text
 src/TurboOmicsIntegrator/jobs/UntargetedSamplePaper/CMM_TP/pos/CMM_pos.json filter=lfs diff=lfs merge=lfs -text
 src/public/jobs/UntargetedSamplePaper_neg/TurboPutative_results.zip filter=lfs diff=lfs merge=lfs -text
+src/public/jobs/4eYOz8s8nD_pos/TurboPutative_results.zip filter=lfs diff=lfs merge=lfs -text
+src/public/jobs/4eYOz8s8nD_neg/TurboPutative_results.zip filter=lfs diff=lfs merge=lfs -text
