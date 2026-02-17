@@ -13,8 +13,6 @@ src/TurboPutative-2.0-built/TPProcesser/REname/data/preProcessedNames.tsv
 src/public/jobs/* 
 !src/public/jobs/4eYOz8s8nD_pos
 !src/public/jobs/4eYOz8s8nD_neg
-!src/public/jobs/UntargetedSamplePaper_pos
-!src/public/jobs/UntargetedSamplePaper_neg
 src/TurboOmicsIntegrator/jobs/*
 !src/TurboOmicsIntegrator/jobs/UntargetedSamplePaper
 !src/TurboOmicsIntegrator/jobs/4eYOz8s8nD
