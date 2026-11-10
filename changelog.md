@@ -1,4 +1,13 @@
 ___
+## 1.5
+
+### Date 📅 *2026_11*
+
+### Changes in the detail
+
++ Added the Google Analytics script.
+
+___
 ## 1.4
 
 ### Date 📅 *2026_02*
